@@ -1,0 +1,95 @@
+
+    #big1{
+        width: 100%;
+        height: 200%;
+        background-color: rgb(44,19,56);
+        margin: 0;
+    }
+    #mid{
+        width: 90%;
+        margin: auto;
+        border: 1px solid white;
+        height: 200%;
+      
+    }
+    #mid>div{
+        border: 1px solid yellow; 
+        width: 100%;
+        
+        
+    }
+    #mid>div:nth-child(1){
+        margin-top: 70px;
+        height: 10%;
+      
+    }
+    #mid>div:nth-child(1)>h1>em{
+
+        font-family: 'GT Haptik Medium Rotalic',sans-serif; 
+        color: #E57CD8;
+        font-weight: 400;
+   
+    }
+
+    #mid>div:nth-child(1)>h1{
+        
+        font-family: 'GT Haptik Medium',sans-serif;
+        font-weight: 400;
+        line-height: 1.1;
+        font-size: clamp(5rem * 0.5, 4.9vw, 5rem);
+        color: #FFF3ED;
+        margin-bottom: 25px;
+        text-align: left;
+        max-width: 950px;
+       
+    }
+
+
+    #mid>div:nth-child(2){
+      
+        height: 18%;
+        display: flex;
+       justify-content: space-between;
+       
+       
+    }
+    #mid>div:nth-child(3){
+       
+      height: 12%;
+  }
+
+  #mid>div:nth-child(2)>div{
+    border: 1px solid greenyellow;
+    width: 45%;
+    height: 80%;
+    
+  }
+::placeholder{
+    color: #FFF3ED;
+}
+
+.input-box{
+    background: transparent;
+                    border: 2px solid #ABA0AF;
+                    height: 50px;
+                    width: 80%;
+                    padding-left: 15px;
+                    caret-color: #2C1338;
+                   
+                    
+                    color: #FCE5D8;
+}
+  
+.input-box>input{
+    background: transparent;
+    border: none;
+    outline: none;
+    margin-top: 4%;
+    color: #FCE5D8;
+    width: 90%;
+}
+
+.eye{
+    position: absolute;
+    margin-top: 17px;
+}
