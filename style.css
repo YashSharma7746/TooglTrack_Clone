@@ -1,0 +1,351 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap");
+* {
+  font-family: "Inter", sans-serif;
+  margin: auto;
+}
+em {
+  font-family: "GT Haptik Medium", sans-serif;
+  color: #e57cd8;
+}
+#forthDiv {
+  background-color: #fff3ed;
+}
+#forthDiv h2 {
+  padding-bottom: 28px;
+}
+#ftone {
+  display: flex;
+
+  width: 70%;
+  margin: auto;
+}
+#ftone > div {
+  margin: auto;
+  width: 45%;
+  height: 350px;
+  margin-top: 100px;
+}
+#ftone h2 {
+  color: #2c1338;
+  font-family: "GT Haptik Medium", sans-serif;
+  font-weight: 550;
+  line-height: 1.2;
+  font-size: clamp(3rem * 0.55, 3.5vw, 3rem);
+}
+#ftone p {
+  font-size: 20px;
+  font-weight: 100;
+  color: #564260;
+  line-height: 1.5;
+  font-size: clamp(1.125rem * 0.9, 1.25vw, 1.125rem);
+}
+#fttwo {
+  margin: auto;
+  margin-bottom: 100px;
+}
+#ftto {
+  display: flex;
+  justify-content: space-around;
+  width: 75%;
+  height: auto;
+  margin: auto;
+  /* border: 5px solid maroon; */
+  margin-left: 120px;
+  margin-bottom: 20px;
+}
+#ftto img {
+  width: 12%;
+}
+#ftt {
+  display: flex;
+  width: 75%;
+  margin: auto;
+}
+#ftt div {
+  width: 40%;
+  padding: 2%;
+  text-align: justify;
+  padding: 0px 50px;
+}
+#ftt h5 {
+  color: #2c1338;
+  font-family: "GT Haptik Medium", sans-serif;
+  font-weight: 550;
+  font-size: clamp(1.25rem, 1.5vw, 1.25rem * 1.1);
+  line-height: 1.5;
+  margin: 15px 0 10px;
+  line-height: 1.2;
+}
+#ftt p {
+  color: #564260;
+  line-height: 1.5;
+  font-size: clamp(1rem * 0.95, 1vw, 1rem);
+}
+#buttonone b {
+  margin-left: 8px;
+}
+#buttonone img {
+  width: 12%;
+}
+#buttonone button {
+  width: 200px;
+  text-align: center;
+}
+#buttonone > button:nth-child(2) {
+  margin-left: -1px;
+}
+#buttontwo button {
+  width: 70%;
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  align-items: center;
+  font-size: 25px;
+}
+#buttontwo b {
+  margin-left: 10px;
+}
+#buttontwo img {
+  width: 20%;
+  margin-right: -15px;
+  height: 100%;
+}
+
+#ftt h5 {
+  color: #2c1338;
+  font-family: "GT Haptik Medium", sans-serif;
+  font-weight: 550;
+  font-size: clamp(1.25rem, 1.5vw, 1.25rem * 1.1);
+  line-height: 1.5;
+  margin: 15px 0 10px;
+  line-height: 1.2;
+}
+#ftt p {
+  color: #564260;
+  line-height: 1.5;
+  font-size: clamp(1rem * 0.95, 1vw, 1rem);
+}
+#fifthDiv {
+  background-color: #412a4c;
+  border: 5px solid balck;
+  padding-bottom: 140px;
+}
+#fifthDiv > div > h1 {
+  color: #fff3ed;
+  margin: auto;
+  font-family: "GT Haptik Medium", sans-serif;
+  font-weight: 400;
+  line-height: 1.2;
+  font-size: clamp(3rem * 0.55, 3.5vw, 3rem);
+  max-width: 850px;
+  text-align: center;
+  padding: 100px 0px 60px 0px;
+}
+
+#ftone {
+  display: flex;
+  margin-bottom: 50px;
+  width: 80%;
+}
+#ftone > div {
+  width: 40%;
+}
+#signup {
+  color: #fce5d8;
+  background-color: #2c1338;
+  padding: 0px 0px 180px 0px;
+  position: absolute;
+  z-index: 1000;
+}
+#signup h2 {
+  color: #fce5d8;
+  font-family: "GT Haptik Medium", sans-serif;
+  font-weight: 400;
+  line-height: 1.2;
+  font-size: clamp(3rem * 0.55, 3.5vw, 3rem);
+  margin-left: 100px;
+  margin-top: 50px;
+}
+#signup p {
+  color: #fce5d8;
+  line-height: 1.5;
+  font-size: clamp(1rem * 0.95, 1vw, 1rem);
+  margin: auto;
+  font-size: 15px;
+  margin-bottom: 20px;
+  text-align: justify;
+  width: 72%;
+}
+#buttontwo + p {
+  margin-top: 28px;
+  font-size: 13px;
+}
+#signup button {
+  font-family: "GT Haptik Medium", sans-serif;
+  font-size: 1rem;
+  background: white;
+  border: none;
+  color: #2c1338;
+  align-items: center;
+  height: 52px;
+  cursor: pointer;
+  border-radius: 50px;
+  margin: 10px;
+  margin-left: 80px;
+}
+
+#demo {
+  padding: 0px 50px;
+  background-color: #fce5d8;
+}
+#demo button {
+  background-color: #e57cd8;
+  color: white;
+  margin: 20px;
+  margin-left: 80px;
+  font-size: 17px;
+  padding: 10px 25px;
+  top: 32%;
+  left: 53%;
+  z-index: 1000;
+  transition: 0.25s ease;
+  font-family: GT Haptik Medium, sans-serif;
+  border: none;
+  align-items: center;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 50px;
+  width: 32%;
+}
+#demo h1 {
+  margin-top: 60px;
+  margin-left: 80px;
+  padding-bottom: 20px;
+  color: #2c1338;
+  font-family: "GT Haptik Medium", sans-serif;
+  font-weight: 400;
+  line-height: 1.25;
+  font-size: clamp(2rem * 0.8, 2.5vw, 2rem);
+}
+#sixthDiv {
+  background-color: #564260;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 40px;
+  margin-bottom: -20px;
+}
+#sixthDiv img {
+  margin-top: -50px;
+}
+#footer {
+  background-color: #2c1338;
+  color: white;
+  line-height: 2;
+}
+
+#footerone {
+  display: flex;
+  margin-top: 10px;
+  margin: 20px;
+  width: 95%;
+}
+#footerone h5 {
+  color: #7d6577;
+  padding-bottom: 20px;
+  font-weight: bolder;
+}
+.dot {
+  color: #2c1338;
+}
+#socialmediaimg {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  gap: 15px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.fa {
+  padding: 10px;
+  font-size: 50px;
+  font-weight: 700;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3b5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55acee;
+  color: white;
+}
+
+.fa-github {
+  background: black;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+#bottom {
+  display: flex;
+  background-color: #412a4c;
+  margin-left: -10px;
+  padding: 25px;
+}
+
+#bottom p {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #fce5d8;
+  text-align: left;
+  line-height: 1.5;
+}
+#lastdiv {
+  background-color: #e57cd8;
+  padding: 15px;
+}
+#lastdiv p {
+  color: black;
+  padding-left: 40px;
+  font-size: 15px;
+}
+
+#footerone p:hover {
+  text-decoration: underline;
+}
+button:hover {
+  opacity: 0.7;
+}
+#bea:hover {
+  color: #a876f5;
+  text-decoration: underline;
+}
+#skill:hover {
+  color: #ff8a7a;
+  text-decoration: underline;
+}
