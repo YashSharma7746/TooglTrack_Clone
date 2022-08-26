@@ -6,7 +6,116 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        @media all and (max-width:800px){
+            body{
+                margin: 0;
+            }
+            #nav_top{
+                background-color: #2C1338;
+                display: flex;
+                gap: 2rem;
+                width: 100%;
+                position: sticky;
+                top: 0;
+                justify-content: space-between;
+            }
+            #toggl{
+                color: #E57CD8;
+                font-weight: bolder;
+                margin-left: 1rem;
+            }
+            #details{
+                background-color: #2C1338;
+                display: flex;
+                color: white;
+                margin-top: 0rem;
+                gap: 5rem;
+                justify-content: center;
+                align-items: center;
+            }
+            #details>div{
+                cursor: pointer;
+            }
+            #nav_third{
+                display: flex;
+                color: white;
+                justify-content: center;
+                align-items: center;
+                gap: 2rem;
+                cursor: pointer;
+                margin-right: 2rem;
+            }
+            #free{
+                border: none;
+                color: rgb(229, 124, 216);
+                background-color: #FCE5D8;
+                font: 16px "GT Haptik Medium", sans-serif;
+                padding: 10px 25px;
+                border-radius: 25px;
+                cursor: pointer;
+                font-weight: bold;
+            }
+            #product_info,#track_info,#career_info{
+                visibility: hidden;
+                background-color: #FCE5D8;
+                margin-top: 0rem;
+                width: 100%;
+                line-height: 3rem;
+                text-align: center;
+                overflow: scroll;
+            }
+            #product_info{
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+            }
+            #first_div_pro{
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                grid-template-rows: repeat(3,1fr);
+                border: 2px solid brown;
+            }
+            #product_info,#track_info,#career_info{
+                text-align: left;
+                display: flex;
+            }
+            #product_info>div,#track_info>div,#career_info>div{
+                display: flex;
+                cursor: pointer;
+            }
+            
+            #product_info>div>div>h4:hover,#track_info>div>div>h4:hover,#career_info>div>div>h4:hover{
+                font-style: italic;
+            }
+            #product_info>h3,#track_info>h3,#career_info>h3{
+                margin-bottom: -1rem;
+                color: grey;
+                margin-left: 1rem;
+            }
+            #product_info>div>img,#track_info>div>img,#career_info>div>img{
+                width: 2.5rem;
+            }
+            #product_info>div>div>h4,#track_info>div>div>h4,#career_info>div>div>h4{
+                margin-top: .5rem;
+                margin-bottom: -2.5rem;
+            }
+            #product_info>div>div>p,#track_info>div>div>p,#career_info>div>div>p{
+                color: grey;
+            }
+            #back_product,#back_track,#back_career{
+                border: none;
+                background: transparent;
+                font-size: larger;
+                cursor: pointer;
+                margin-left: 1rem;
+                margin-bottom: -1.5rem;
+            }
+            #statement{
+                background-color: white;
+                width: 85%;
+                padding: 0px 20px;
+                margin: auto;
+                height: 50px;
+            }
+            @media all and (max-width:800px){
             body{
                 margin: 0;
             }
@@ -52,16 +161,17 @@
                 left: 0;
                 width: 100%;
             }
-            #details,#product_info{
+            #details,#product_info,#track_info,#career_info{
                 visibility: hidden;
                 background-color: #FCE5D8;
                 margin-top: 0rem;
                 padding: 1rem;
                 width: 100%;
-                height: 100%;
+                height: 100% !important;
                 line-height: 3rem;
                 text-align: center;
                 overflow: scroll;
+                display: none;
             }#details>div{
                 cursor: pointer;
                 width: 15%;
@@ -80,33 +190,38 @@
             #login{
                 cursor: pointer;
             }
-            #product_info{
+            #product_info,#track_info,#career_info{
                 text-align: left;
+                margin-bottom: 90%;
             }
-            #product_info>div{
+            #product_info>div,#track_info>div,#career_info>div{
                 display: flex;
                 text-align: left;
                 gap: 1rem;
                 height: 5rem;
                 margin: auto;
-                padding: 1rem;
+                margin-bottom: 20px;
+                cursor: pointer;
             }
-            #product_info>h3{
+            #product_info>div>div>h4:hover,#track_info>div>div>h4:hover,#career_info>div>div>h4:hover{
+                font-style: italic;
+            }
+            #product_info>h3,#track_info>h3,#career_info>h3{
                 margin-bottom: -1rem;
                 color: grey;
                 margin-left: 1rem;
             }
-            #product_info>div>img{
+            #product_info>div>img,#track_info>div>img,#career_info>div>img{
                 width: 2.5rem;
             }
-            #product_info>div>div>h4{
+            #product_info>div>div>h4,#track_info>div>div>h4,#career_info>div>div>h4{
                 margin-top: .5rem;
                 margin-bottom: -2.5rem;
             }
-            #product_info>div>div>p{
+            #product_info>div>div>p,#track_info>div>div>p,#career_info>div>div>p{
                 color: grey;
             }
-            #back{
+            #back_product,#back_track,#back_career{
                 border: none;
                 background: transparent;
                 font-size: larger;
@@ -116,32 +231,40 @@
             }
             #statement{
                 background-color: white;
-                height: 1rem;
+                width: 85%;
+                padding: 0px 20px;
+                margin: auto;
+                height: 50px;
             }
         }
     </style>
 </head>
 <body>
-    <div id="navbar" class="topnav">
-        <div id="toggl"><h2>toggl track</h2></div>
-        <div id="dropdown" onclick="myFunction(this)">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
+    <div id="nav_top">
+        <div id="navbar" class="topnav">
+            <div id="toggl"><h2>toggl track</h2></div>
+            <div id="dropdown">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+        </div>
+        <div id="details">
+            <div id="product">Product</div>
+            <div id="pricing">Pricing</div>
+            <div id="track">Why Track?</div>
+            <div id="career">Careers</div>
+        </div>
+        <div id="nav_third">
+            <h3 id="demo">Book a demo</h3><span>|</span>
+            <button id="free">Try for free</button>
+            <h3 id="login">Log in</h3>
         </div>
     </div>
-    <div id="details">
-        <div id="product">Product</div>
-        <div id="pricing">Pricing</div>
-        <div id="whyTrack">Why Track?</div>
-        <div id="carrer">Careers</div>
-        <div id="demo">Book a demo</div>
-        <button id="free">Try for free</button>
-        <h3 id="login">Log in</h3>
-    </div>
     <div id="product_info">
-        <button id="back">Back</button>
+        <button id="back_product">Back</button>
         <h3>FOR EVERY NEED</h3>
+        <div id="first_div_pro">
         <div>
             <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAiIGhlaWdodD0iNTUiIHZpZXdCb3g9IjAgMCA1MCA1NSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjIyLjgzMDIiIGhlaWdodD0iMjIuODMwMiIgZmlsbD0iI0RENkZEMSIvPgo8cmVjdCB4PSIyNi45ODE0IiB5PSI1LjE4OTQ1IiB3aWR0aD0iMjIuODMwMiIgaGVpZ2h0PSIyMi44MzAyIiBmaWxsPSIjNDEyQTRDIi8+CjxyZWN0IHk9IjI2Ljk4MDUiIHdpZHRoPSIyMi44MzAyIiBoZWlnaHQ9IjIyLjgzMDIiIGZpbGw9IiM0MTJBNEMiLz4KPHJlY3QgeD0iMjYuOTgxNCIgeT0iMzIuMTY5OSIgd2lkdGg9IjIyLjgzMDIiIGhlaWdodD0iMjIuODMwMiIgZmlsbD0iI0RENkZEMSIvPgo8L3N2Zz4K" alt="">
             <div>
@@ -184,77 +307,168 @@
                 <p>Stay on track with budgets and deadlines. Eliminate scope creep and overwork</p>
             </div>
         </div>
-        <div id="statement">Toogl Track stands against employee surveillance. Read our statement here. -></div>
+        </div>
+        <h3 id="statement">Toogl Track stands against employee surveillance. Read our statement here. -></h3>
+        <h3>TRACK ANYWHERE YOU LIKE</h3>
+        <div id="second_div_pro">
         <div>
-            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAiIGhlaWdodD0iNTUiIHZpZXdCb3g9IjAgMCA1MCA1NSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjIyLjgzMDIiIGhlaWdodD0iMjIuODMwMiIgZmlsbD0iI0RENkZEMSIvPgo8cmVjdCB4PSIyNi45ODE0IiB5PSI1LjE4OTQ1IiB3aWR0aD0iMjIuODMwMiIgaGVpZ2h0PSIyMi44MzAyIiBmaWxsPSIjNDEyQTRDIi8+CjxyZWN0IHk9IjI2Ljk4MDUiIHdpZHRoPSIyMi44MzAyIiBoZWlnaHQ9IjIyLjgzMDIiIGZpbGw9IiM0MTJBNEMiLz4KPHJlY3QgeD0iMjYuOTgxNCIgeT0iMzIuMTY5OSIgd2lkdGg9IjIyLjgzMDIiIGhlaWdodD0iMjIuODMwMiIgZmlsbD0iI0RENkZEMSIvPgo8L3N2Zz4K" alt="">
+            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTMiIGhlaWdodD0iMzkiIHZpZXdCb3g9IjAgMCA1MyAzOSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTQxLjg3NiAwSDExLjA5MTZDOC44ODI5NSAwIDcuMDkyNTMgMS43OTA0MiA3LjA5MjUzIDMuOTk5MDdWMjkuNzIzNUM3LjA5MjUzIDMxLjkzMjIgOC44ODI5NSAzMy43MjI2IDExLjA5MTYgMzMuNzIyNkg0MS44NzZDNDQuMDg0NyAzMy43MjI2IDQ1Ljg3NTEgMzEuOTMyMiA0NS44NzUxIDI5LjcyMzVWMy45OTkwN0M0NS44NzUxIDEuNzkwNDIgNDQuMDg0NyAwIDQxLjg3NiAwWiIgZmlsbD0iIzdFNzI4NCIvPgo8cGF0aCBkPSJNNDIuOTkgMy4xNDE2SDkuOTczMzlWMzAuNTg0Mkg0Mi45OVYzLjE0MTZaIiBmaWxsPSIjMkMxMzM4Ii8+CjxyZWN0IHg9IjEwLjA5MDgiIHk9IjMuMjA2MDUiIHdpZHRoPSI5LjA1MzM4IiBoZWlnaHQ9IjI3LjM0ODgiIGZpbGw9IiMyQzEzMzgiLz4KPHBhdGggZD0iTTI2LjQ4NCAyLjM5NTMzQzI2Ljg3MzggMi4zOTUzMyAyNy4xODk5IDIuMDc5MjMgMjcuMTg5OSAxLjY4OTM3QzI3LjE4OTkgMS4yOTk0NiAyNi44NzM4IDAuOTgzMzk4IDI2LjQ4NCAwLjk4MzM5OEMyNi4wOTQyIDAuOTgzMzk4IDI1Ljc3ODEgMS4yOTk0NiAyNS43NzgxIDEuNjg5MzdDMjUuNzc4MSAyLjA3OTIzIDI2LjA5NDIgMi4zOTUzMyAyNi40ODQgMi4zOTUzM1oiIGZpbGw9IiM1NDQ2NUUiLz4KPHBhdGggZD0iTTE0LjUgMTBDMTUuODgwOCAxMCAxNyA4Ljg4MDcyIDE3IDcuNTAwMDFDMTcgNi4xMTkzIDE1Ljg4MDggNSAxNC41IDVDMTMuMTE5NCA1IDEyIDYuMTE5MyAxMiA3LjUwMDAxQzEyIDguODgwNzIgMTMuMTE5NCAxMCAxNC41IDEwWiIgZmlsbD0iI0U1N0NEOCIvPgo8cGF0aCBkPSJNNTEuNjY5NSAzMy42NDk0SDEuMzE0MTJDMS4wNTQxMyAzMy42NTI3IDAuODAwNzQ0IDMzLjczMTggMC41ODUzMjcgMzMuODc3NEMwLjM2OTg3MyAzNC4wMjMgMC4yMDE4NTQgMzQuMjI4NSAwLjEwMjAwMiAzNC40Njg3QzAuMDAyMTUwOTcgMzQuNzA5IC0wLjAyNTE1OTkgMzQuOTczMSAwLjAyMzQ2NTMgMzUuMjI4NUMwLjA3MjA5MDQgMzUuNDgzOSAwLjE5NDUxOCAzNS43MTk0IDAuMzc1NTggMzUuOTA1OEwyLjY1MjYyIDM4LjI0ODJDMi44MzM4MiAzOC40MzU3IDMuMDUwNTggMzguNTg1MyAzLjI5MDE2IDM4LjY4ODJDMy41Mjk3NSAzOC43OTE1IDMuNzg3NDMgMzguODQ1NyA0LjA0ODE5IDM4Ljg0ODNINDguOTM1NUM0OS4xOTkzIDM4Ljg0NzkgNDkuNDU5NyAzOC43OTQ0IDQ5LjcwMjUgMzguNjkxNUM0OS45NDQ5IDM4LjU4ODUgNTAuMTY0MiAzOC40Mzc5IDUwLjM0NzMgMzguMjQ4Mkw1Mi42MjQzIDM1LjkwNThDNTIuODA2NCAzNS43MTgzIDUyLjkyOTIgMzUuNDgxMyA1Mi45NzczIDM1LjIyNDVDNTMuMDI1MyAzNC45NjczIDUyLjk5NjggMzQuNzAyMSA1Mi44OTQ5IDM0LjQ2MTJDNTIuNzkzMSAzNC4yMjA2IDUyLjYyMjUgMzQuMDE1IDUyLjQwNDcgMzMuODcwOUM1Mi4xODY1IDMzLjcyNjQgNTEuOTMxMSAzMy42NDk0IDUxLjY2OTUgMzMuNjQ5NFoiIGZpbGw9IiMyQzEzMzgiLz4KPGcgZmlsdGVyPSJ1cmwoI2ZpbHRlcjBfZF8xMDYwXzE3MDApIj4KPG1hc2sgaWQ9Im1hc2swXzEwNjBfMTcwMCIgc3R5bGU9Im1hc2stdHlwZTphbHBoYSIgbWFza1VuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeD0iMjYiIHk9IjUiIHdpZHRoPSIxNSIgaGVpZ2h0PSIxNSI+CjxwYXRoIGQ9Ik0zMS40OTYgNS44OTAzM0MzNS4xMjM4IDQuODMyNTIgMzguOTIyMyA2LjkxNTkyIDM5Ljk4MDEgMTAuNTQzN0M0MS4wMzc5IDE0LjE3MTYgMzguOTU0NSAxNy45NyAzNS4zMjY3IDE5LjAyNzhDMzEuNjk4OSAyMC4wODU3IDI3LjkwMDQgMTguMDAyMiAyNi44NDI2IDE0LjM3NDRDMjUuNzg0OCAxMC43NDY2IDI3Ljg2ODIgNi45NDgxNCAzMS40OTYgNS44OTAzM1pNMzIuMzQ3MyA4LjgwOTc4QzMwLjMzMTggOS4zOTc0NSAyOS4xNzQ0IDExLjUwNzcgMjkuNzYyIDEzLjUyMzJDMzAuMzQ5NyAxNS41Mzg2IDMyLjQ2IDE2LjY5NjEgMzQuNDc1NCAxNi4xMDg0QzM2LjQ5MDkgMTUuNTIwNyAzNy42NDgzIDEzLjQxMDUgMzcuMDYwNiAxMS4zOTVDMzYuNDczIDkuMzc5NTUgMzQuMzYyNyA4LjIyMjEgMzIuMzQ3MyA4LjgwOTc4WiIgZmlsbD0id2hpdGUiLz4KPC9tYXNrPgo8ZyBtYXNrPSJ1cmwoI21hc2swXzEwNjBfMTcwMCkiPgo8cGF0aCBkPSJNMzEuNDk2IDUuODkwMzNDMzUuMTIzOCA0LjgzMjUyIDM4LjkyMjMgNi45MTU5MiAzOS45ODAxIDEwLjU0MzdDNDEuMDM3OSAxNC4xNzE2IDM4Ljk1NDUgMTcuOTcgMzUuMzI2NyAxOS4wMjc4QzMxLjY5ODkgMjAuMDg1NyAyNy45MDA0IDE4LjAwMjIgMjYuODQyNiAxNC4zNzQ0QzI1Ljc4NDggMTAuNzQ2NiAyNy44NjgyIDYuOTQ4MTQgMzEuNDk2IDUuODkwMzNaTTMyLjM0NzMgOC44MDk3OEMzMC4zMzE4IDkuMzk3NDUgMjkuMTc0NCAxMS41MDc3IDI5Ljc2MiAxMy41MjMyQzMwLjM0OTcgMTUuNTM4NiAzMi40NiAxNi42OTYxIDM0LjQ3NTQgMTYuMTA4NEMzNi40OTA5IDE1LjUyMDcgMzcuNjQ4MyAxMy40MTA1IDM3LjA2MDYgMTEuMzk1QzM2LjQ3MyA5LjM3OTU1IDM0LjM2MjcgOC4yMjIxIDMyLjM0NzMgOC44MDk3OFoiIGZpbGw9IiM2QjVBNzQiLz4KPHBhdGggZD0iTTMxLjQ5NiA1Ljg5MDMzQzM1LjEyMzggNC44MzI1MiAzOC45MjIzIDYuOTE1OTIgMzkuOTgwMSAxMC41NDM3QzQxLjAzNzkgMTQuMTcxNiAzOC45NTQ1IDE3Ljk3IDM1LjMyNjcgMTkuMDI3OEMzMS42OTg5IDIwLjA4NTcgMjcuOTAwNCAxOC4wMDIyIDI2Ljg0MjYgMTQuMzc0NEMyNS43ODQ4IDEwLjc0NjYgMjcuODY4MiA2Ljk0ODE0IDMxLjQ5NiA1Ljg5MDMzWk0zMi4zNDczIDguODA5NzhDMzAuMzMxOCA5LjM5NzQ1IDI5LjE3NDQgMTEuNTA3NyAyOS43NjIgMTMuNTIzMkMzMC4zNDk3IDE1LjUzODYgMzIuNDYgMTYuNjk2MSAzNC40NzU0IDE2LjEwODRDMzYuNDkwOSAxNS41MjA3IDM3LjY0ODMgMTMuNDEwNSAzNy4wNjA2IDExLjM5NUMzNi40NzMgOS4zNzk1NSAzNC4zNjI3IDguMjIyMSAzMi4zNDczIDguODA5NzhaIiBmaWxsPSJ3aGl0ZSIgZmlsbC1vcGFjaXR5PSIwLjE1Ii8+CjxwYXRoIGQ9Ik0zMy4zMzgyIDEyLjQ3OTlMMzEuNDIyOSA1LjkxMTEzTDM4LjA2NDYgMy45NzQ1MUw0MS44OTUzIDE3LjExMkwzNS4yNTM1IDE5LjA0ODZMMzMuMzM4MiAxMi40Nzk5WiIgZmlsbD0iI0ZGREU5MSIvPgo8cGF0aCBkPSJNMzMuMzM4MiAxMi40Nzk5TDMxLjQyMjkgNS45MTExM0wzOC4wNjQ2IDMuOTc0NTFMNDEuODk1MyAxNy4xMTJMMzUuMjUzNSAxOS4wNDg2TDMzLjMzODIgMTIuNDc5OVoiIGZpbGw9IndoaXRlIiBmaWxsLW9wYWNpdHk9IjAuMTUiLz4KPHBhdGggZD0iTTI3Ljg3NzMgMTcuOTI0MkwzMy4zOTA4IDEyLjQ0ODdMMzguNjEyMSAxOC4zMDA1TDI4LjgxOTYgMjEuMTU1OEwyNy44NzczIDE3LjkyNDJaIiBmaWxsPSIjOTU4OTlCIi8+CjxwYXRoIGQ9Ik0yNy44NzczIDE3LjkyNDJMMzMuMzkwOCAxMi40NDg3TDM4LjYxMjEgMTguMzAwNUwyOC44MTk2IDIxLjE1NThMMjcuODc3MyAxNy45MjQyWiIgZmlsbD0id2hpdGUiIGZpbGwtb3BhY2l0eT0iMC4xNSIvPgo8cGF0aCBkPSJNMjguNDcxMSA1Ljc4MzYxTDMzLjM5MjQgMTIuNDQ3N0wyNC4wODA5IDEwLjMzODFMMjguNDcxMSA1Ljc4MzYxWiIgZmlsbD0iIzU2NDI2MCIvPgo8cGF0aCBkPSJNMjcuMTI5OCAzLjk2NDk0TDMwLjQ3MDEgMi40MzI0N0wzMy4zOTIxIDEyLjQ0ODhMMjcuMTI5OCAzLjk2NDk0WiIgZmlsbD0iIzU2NDI2MCIvPgo8L2c+CjwvZz4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0yMC4yMzA1IDEyLjc5NDJDMjAuMjMwNSAxMi41MTE1IDIwLjUzNzggMTIuMjgyMiAyMC45MTYxIDEyLjI4MjJIMjIuOTczNUMyMy4zNTIyIDEyLjI4MjIgMjMuNjU5MSAxMi41MTE4IDIzLjY1OTEgMTIuNzk0MlYzMC43MDYzSDIwLjIzMDVWMTIuNzk0MloiIGZpbGw9IiNGNUNCRUYiLz4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0yOC45OTI0IDIxLjU0MkMyOC45OTI0IDIxLjQxNjMgMjkuMjk5NyAyMS4zMTQ1IDI5LjY3OCAyMS4zMTQ1SDMxLjczNTVDMzIuMTE0MSAyMS4zMTQ1IDMyLjQyMTEgMjEuNDE2NyAzMi40MjExIDIxLjU0MlYzMC43MDcxSDI4Ljk5MjRWMjEuNTQyWiIgZmlsbD0iI0Y1Q0JFRiIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTM3Ljc1NDYgMjAuMzMzOEMzNy43NTQ2IDIwLjA3NjcgMzguMDYxOSAxOS44NjgyIDM4LjQ0MDIgMTkuODY4Mkg0MC40OTc3QzQwLjg3NjMgMTkuODY4MiA0MS4xODMzIDIwLjA3NzQgNDEuMTgzMyAyMC4zMzM4VjMwLjcwNTlIMzcuNzU0NlYyMC4zMzM4WiIgZmlsbD0iI0Y1Q0JFRiIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTI0LjgwMiAxOS40MTI0QzI0LjgwMiAxOS4yNjU2IDI1LjA3NTEgMTkuMTQ2NSAyNS40MTE0IDE5LjE0NjVIMjcuMjQwM0MyNy41NzY4IDE5LjE0NjUgMjcuODQ5NyAxOS4yNjU2IDI3Ljg0OTcgMTkuNDEyNFYzMC43MDY3SDI0LjgwMlYxOS40MTI0WiIgZmlsbD0iI0Y1Q0JFRiIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTMzLjM4NjcgMjMuNzI3N0MzMy4zODY3IDIzLjUzMDIgMzMuNjc3MyAyMy4zNzAxIDM0LjAzNTEgMjMuMzcwMUgzNS45ODA5QzM2LjMzOSAyMy4zNzAxIDM2LjYyOTMgMjMuNTMwMiAzNi42MjkzIDIzLjcyNzdWMzAuNzA2NEgzMy4zODY3VjIzLjcyNzdaIiBmaWxsPSIjRjVDQkVGIi8+CjxkZWZzPgo8ZmlsdGVyIGlkPSJmaWx0ZXIwX2RfMTA2MF8xNzAwIiB4PSIyNi4yODQyIiB5PSI1LjQyNjYyIiB3aWR0aD0iMTQuMjU0MSIgaGVpZ2h0PSIxNC4yNTMzIiBmaWx0ZXJVbml0cz0idXNlclNwYWNlT25Vc2UiIGNvbG9yLWludGVycG9sYXRpb24tZmlsdGVycz0ic1JHQiI+CjxmZUZsb29kIGZsb29kLW9wYWNpdHk9IjAiIHJlc3VsdD0iQmFja2dyb3VuZEltYWdlRml4Ii8+CjxmZUNvbG9yTWF0cml4IGluPSJTb3VyY2VBbHBoYSIgdHlwZT0ibWF0cml4IiB2YWx1ZXM9IjAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDEyNyAwIiByZXN1bHQ9ImhhcmRBbHBoYSIvPgo8ZmVPZmZzZXQgZHk9IjAuMDk0MzA2MSIvPgo8ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSIwLjE0MTQ1OSIvPgo8ZmVDb2xvck1hdHJpeCB0eXBlPSJtYXRyaXgiIHZhbHVlcz0iMCAwIDAgMCAwLjE2ODYyNyAwIDAgMCAwIDAuMDc0NTA5OCAwIDAgMCAwIDAuMjI3NDUxIDAgMCAwIDAuMSAwIi8+CjxmZUJsZW5kIG1vZGU9Im5vcm1hbCIgaW4yPSJCYWNrZ3JvdW5kSW1hZ2VGaXgiIHJlc3VsdD0iZWZmZWN0MV9kcm9wU2hhZG93XzEwNjBfMTcwMCIvPgo8ZmVCbGVuZCBtb2RlPSJub3JtYWwiIGluPSJTb3VyY2VHcmFwaGljIiBpbjI9ImVmZmVjdDFfZHJvcFNoYWRvd18xMDYwXzE3MDAiIHJlc3VsdD0ic2hhcGUiLz4KPC9maWx0ZXI+CjwvZGVmcz4KPC9zdmc+Cg==" alt="">
             <div>
-                <h4>Key features</h4>
-                <p>View features by need, from time tracking to project and team management</p>
+                <h4>Web app</h4>
+                <p>Full-suite app for time, project and team management</p>
             </div>
         </div>
         <div>
-            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAiIGhlaWdodD0iNTUiIHZpZXdCb3g9IjAgMCA1MCA1NSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjIyLjgzMDIiIGhlaWdodD0iMjIuODMwMiIgZmlsbD0iI0RENkZEMSIvPgo8cmVjdCB4PSIyNi45ODE0IiB5PSI1LjE4OTQ1IiB3aWR0aD0iMjIuODMwMiIgaGVpZ2h0PSIyMi44MzAyIiBmaWxsPSIjNDEyQTRDIi8+CjxyZWN0IHk9IjI2Ljk4MDUiIHdpZHRoPSIyMi44MzAyIiBoZWlnaHQ9IjIyLjgzMDIiIGZpbGw9IiM0MTJBNEMiLz4KPHJlY3QgeD0iMjYuOTgxNCIgeT0iMzIuMTY5OSIgd2lkdGg9IjIyLjgzMDIiIGhlaWdodD0iMjIuODMwMiIgZmlsbD0iI0RENkZEMSIvPgo8L3N2Zz4K" alt="">
+            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDEiIGhlaWdodD0iNTMiIHZpZXdCb3g9IjAgMCA0MSA1MyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTcuMjE3NjMgMjguMDQzMUw3LjY0NDU4IDI0LjQwMDdDNy42NDQ1OCAyNC40MDA3IDguMDQzNzYgMjEuODk5MyA1LjgwOTM1IDIxLjM0ODdDNS4yMzE0IDIxLjIxOTMgNC42MzI4NCAyMS4yMTU4IDQuMDUzNjMgMjEuMzM4N0MzLjQ3NDQyIDIxLjQ2MTYgMi45MjgyNyAyMS43MDc4IDIuNDUyNzQgMjIuMDYwNkMxLjk3NzIxIDIyLjQxMzUgMS41ODMzMyAyMi44NjQ3IDEuMjk3ODkgMjMuMzgzNUMxLjAxMjQxIDIzLjkwMjIgMC44NDIwOTMgMjQuNDc2NCAwLjc5ODUxNSAyNS4wNjdDMC41NDcxODcgMjcuOTM5NCAyLjE0MzAzIDMwLjI4OTMgNC4zMzcxMyAzMC40MTY5QzYuNTMxNTggMzAuNTQ0NiA3LjA4NTk3IDI5LjM4NzcgNy4yMTc2MyAyOC4wNDMxWiIgZmlsbD0iI0E4NUQ0MiIvPgo8cGF0aCBkPSJNNi4yNTIyMyAzNi4zNDU1TDYuNTcxNDkgMzMuNTg4N0M2LjYxOTQ1IDMzLjAxNTggNi40NjU5MiAzMi40NDQyIDYuMTM3NCAzMS45NzIyQzUuODA4ODkgMzEuNTAwMyA1LjMyNiAzMS4xNTc0IDQuNzcyMDMgMzEuMDAzNkMzLjE3NjI3IDMwLjQ4NDkgMC44NzAzMTUgMzAuODk5OCAwLjM4MzU1OCAzNC40NTQ0Qy0wLjEwMzE1NyAzOC4wMDkxIDEuNzgzODkgNDAuMjE5NiAzLjY1MTA0IDQwLjE4MzRDNS41MTgyMyA0MC4xNDc2IDUuOTI5MTkgMzkuMTAyNCA2LjI1MjIzIDM2LjM0NTVaIiBmaWxsPSIjQTg1RDQyIi8+CjxwYXRoIGQ9Ik0xNC4xOTEzIDcuODgzNTFMMTAuNDUzMSA0LjE2NTI4QzkuODM1MjQgMy41NTIxNiA5LjAwNjE3IDMuMTk3OTkgOC4xMzU4OCAzLjE3NTAyQzcuMjY1NTkgMy4xNTIwNSA2LjQxOTI3IDMuNDYxOTggNS43Njk0IDQuMDQxNTdDNS40MjkxIDQuMzQ2MjcgNS4xNTM1OSA0LjcxNjE0IDQuOTU4NDEgNS4xMjkzM0M0Ljc2MzY2IDUuNTQyNTEgNC42NTM4NyA1Ljk5MDU3IDQuNjM0OTQgNi40NDdDNC42MTY0NCA2LjkwMzQ3IDQuNjg5NjMgNy4zNTg5OCA0Ljg1MDMxIDcuNzg2NjNDNS4wMTA5OSA4LjIxNDI5IDUuMjU1OCA4LjYwNTQgNS41NzAwMSA4LjkzNjc3TDEwLjczMjQgMTQuMzcwNkwxMS4wOTk3IDE1LjE2ODVMNS4zODI0MSAxMC4zMzMxQzUuMDUxMzcgMTAuMDUyNyA0LjY2Nzc1IDkuODQxMDEgNC4yNTM4NSA5LjcxMDMyQzMuODM5OTUgOS41Nzk2NyAzLjQwNDE3IDkuNTMyNjQgMi45NzIwNSA5LjU3MTk3QzIuNTM5ODUgOS42MTEzNCAyLjExOTgxIDkuNzM2MzEgMS43MzY0IDkuOTM5NTZDMS4zNTI5NSAxMC4xNDI5IDEuMDEzOCAxMC40MjA0IDAuNzM4NzA0IDEwLjc1NkMwLjIzNjU1MiAxMS4zNzA3IC0wLjAyNTI1MTUgMTIuMTQ2OCAwLjAwMTkyMTQyIDEyLjk0MDFDMC4wMjkwNTIzIDEzLjczMzQgMC4zNDMzMDggMTQuNDg5OCAwLjg4NjMwNCAxNS4wNjg3TDguNDAyNTYgMjMuMDcxOEwxNC4xOTEzIDcuNjc2MDUiIGZpbGw9IiNBODVENDIiLz4KPHBhdGggZD0iTTE0LjgxIDBIMzEuMjY2OUMzMS45NzczIDAuMDAxNjgyNTMgMzIuNjc5IDAuMTU2NjAyIDMzLjMyMzggMC40NTQxMTVDMzMuOTY5MSAwLjc1MTY3MiAzNC41NDE5IDEuMTg0ODQgMzUuMDA0NiAxLjcyNDA5QzM1LjQ2NjkgMi4yNjMzNCAzNS44MDc2IDIuODk2MDIgMzYuMDAzMiAzLjU3ODkyQzM2LjE5ODggNC4yNjE4MSAzNi4yNDQ3IDQuOTc4ODMgMzYuMTM4MyA1LjY4MTEyTDMwLjA5MzggNDYuMjQzMkgxMS41MjY2QzEwLjcxMjIgNDYuMjQzNiA5LjkwNzU2IDQ2LjA3MTUgOS4xNjQ3MiA0NS43Mzg0QzguNDIxODggNDUuNDA1NyA3Ljc1NzcgNDQuOTE5NCA3LjIxNjM0IDQ0LjMxMTZDNi42NzQ5OSA0My43MDM4IDYuMjY4MjQgNDIuOTg4MyA2LjAyMzAxIDQyLjIxMThDNS43Nzc3OCA0MS40MzU3IDUuNjk5NTQgNDAuNjE2NCA1Ljc5MzM0IDM5LjgwNzlMOS45MjY0OSA0LjM0ODYzQzEwLjA2NjYgMy4xNTEzOCAxMC42NDExIDIuMDQ3MTQgMTEuNTQxMyAxLjI0NTVDMTIuNDQxNSAwLjQ0Mzg5NSAxMy42MDQ1IDAuMDAwNjczMDEzIDE0LjgxIDBaIiBmaWxsPSIjN0U3Mjg0Ii8+CjxwYXRoIGQ9Ik0xMy4xMTg0IDUuNjE3MDhMOS4xNzI4MyA0MC40NThDOS4xNDUwNiA0MC43MDA3IDkuMTY5MDQgNDAuOTQ2MyA5LjI0MzA3IDQxLjE3ODlDOS4zMTc1MiA0MS40MTE2IDkuNDM5OTMgNDEuNjI1NyA5LjYwMjcxIDQxLjgwNzhDOS43NjU1IDQxLjk4OTUgOS45NjQ4OCA0Mi4xMzUgMTAuMTg3OCA0Mi4yMzQ3QzEwLjQxMDggNDIuMzM0IDEwLjY1MjIgNDIuMzg1MyAxMC44OTYyIDQyLjM4NDlIMjQuNjQ0MUMyNS4yODA2IDQyLjM4NDkgMjUuODk1NSA0Mi4xNTYxIDI2LjM3NjcgNDEuNzM5N0MyNi44NTc5IDQxLjMyMzYgMjcuMTczNCA0MC43NDgyIDI3LjI2NTUgNDAuMTE5TDMyLjI4ODMgNS42MDExNEMzMi4zMjQxIDUuMzcxODEgMzIuMzA5OCA1LjEzNzM5IDMyLjI0NTggNC45MTQyNUMzMi4xODE5IDQuNjkxMSAzMi4wNyA0LjQ4NDU3IDMxLjkxODIgNC4zMDkwOEMzMS43NjYzIDQuMTMzNTkgMzEuNTc3OSAzLjk5MzQgMzEuMzY2MyAzLjg5ODIxQzMxLjE1NDMgMy44MDI5OCAzMC45MjQ2IDMuNzU1MTUgMzAuNjkyNCAzLjc1NzkzSDE1LjE5NzFDMTQuNjgyNyAzLjc1ODYgMTQuMTg2OCAzLjk0ODQzIDEzLjgwMzIgNC4yOTEyOUMxMy40MiA0LjYzNDE1IDEzLjE3NiA1LjEwNjA2IDEzLjExODQgNS42MTcwOFoiIGZpbGw9IiMyQzEzMzgiLz4KPHBhdGggZD0iTTIwLjAyNDIgMjcuODMxNUMyMy4wNjUgMjcuODMxNSAyNS41Mjk5IDI1LjM2NjYgMjUuNTI5OSAyMi4zMjU5QzI1LjUyOTkgMTkuMjg1MyAyMy4wNjUgMTYuODIwMyAyMC4wMjQyIDE2LjgyMDNDMTYuOTgzNSAxNi44MjAzIDE0LjUxODYgMTkuMjg1MyAxNC41MTg2IDIyLjMyNTlDMTQuNTE4NiAyNS4zNjY2IDE2Ljk4MzUgMjcuODMxNSAyMC4wMjQyIDI3LjgzMTVaIiBmaWxsPSIjRTU3Q0Q4Ii8+CjxwYXRoIGQ9Ik0xNS41NTU5IDQ2LjI0MzhIMjUuNjQxNEMyNi44NzY0IDQ2LjI0MDQgMjguMDY5MyA0NS43OTY2IDI5LjAwNjUgNDQuOTkyQzI5Ljk0MzMgNDQuMTg3NyAzMC41NjI0IDQzLjA3NTEgMzAuNzUyMSA0MS44NTUzQzMwLjkyOTYgNDAuNjQ3MiAzMC42NzU2IDM5LjQxNTIgMzAuMDM0MSAzOC4zNzYyTDIzLjA5MjQgMjcuMTQxNkMyMi41ODcyIDI2LjMyNyAyMi4zNjAxIDI1LjM3MDYgMjIuNDQ1IDI0LjQxNjFDMjIuNTMgMjMuNDYxNCAyMi45MjI1IDIyLjU2MDEgMjMuNTYzMSAyMS44NDc1QzIzLjg2NDcgMjEuNTExMyAyNC4yMzU3IDIxLjI0NDUgMjQuNjUgMjEuMDY1M0MyNS4wNjQ4IDIwLjg4NjEgMjUuNTEzMSAyMC43OTg4IDI1Ljk2NDUgMjAuODA5NUMyNi40MTU4IDIwLjgyMDEgMjYuODYgMjAuOTI4MyAyNy4yNjU1IDIxLjEyNjhDMjcuNjcxNCAyMS4zMjUyIDI4LjAyODkgMjEuNjA5MiAyOC4zMTQ2IDIxLjk1OTFMMzIuODYyOSAyNy41NDQ2TDMzLjEzNDIgMjUuNzIxM0MzMy4xMzQyIDI1LjcyMTMgMzYuNTY0OSAzMC4yNzM0IDM4LjYyNzcgMzMuNDM3MkM0MC42OSAzNi42MDA4IDQxLjk3ODggNDQuNjgzNiAzNi45NjQgNDkuMzcxNkMzMS45NDkzIDU0LjA1OTEgMjguMjMwOSA1My4yNjU0IDI0LjgyMzcgNTIuMTMyMkMyMS44MzU1IDUxLjEzNDkgMTUuNTU1OSA0Ni4yNDM4IDE1LjU1NTkgNDYuMjQzOFoiIGZpbGw9IiNBODVENDIiLz4KPC9zdmc+Cg==" alt="">
             <div>
-                <h4>Key features</h4>
-                <p>View features by need, from time tracking to project and team management</p>
+                <h4>Mobile apps</h4>
+                <p>Time tracking on the go with our iOS and Android apps</p>
             </div>
         </div>
         <div>
-            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAiIGhlaWdodD0iNTUiIHZpZXdCb3g9IjAgMCA1MCA1NSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjIyLjgzMDIiIGhlaWdodD0iMjIuODMwMiIgZmlsbD0iI0RENkZEMSIvPgo8cmVjdCB4PSIyNi45ODE0IiB5PSI1LjE4OTQ1IiB3aWR0aD0iMjIuODMwMiIgaGVpZ2h0PSIyMi44MzAyIiBmaWxsPSIjNDEyQTRDIi8+CjxyZWN0IHk9IjI2Ljk4MDUiIHdpZHRoPSIyMi44MzAyIiBoZWlnaHQ9IjIyLjgzMDIiIGZpbGw9IiM0MTJBNEMiLz4KPHJlY3QgeD0iMjYuOTgxNCIgeT0iMzIuMTY5OSIgd2lkdGg9IjIyLjgzMDIiIGhlaWdodD0iMjIuODMwMiIgZmlsbD0iI0RENkZEMSIvPgo8L3N2Zz4K" alt="">
+            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTMiIGhlaWdodD0iNTMiIHZpZXdCb3g9IjAgMCA1MyA1MyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTM5LjM5MzIgMTBIMTMuNTg1MkMxMS43MzM3IDEwIDEwLjIzMjcgMTEuNTAxIDEwLjIzMjcgMTMuMzUyNlYzNC45MTg1QzEwLjIzMjcgMzYuNzcwMiAxMS43MzM3IDM4LjI3MTEgMTMuNTg1MiAzOC4yNzExSDM5LjM5MzJDNDEuMjQ0OSAzOC4yNzExIDQyLjc0NTggMzYuNzcwMiA0Mi43NDU4IDM0LjkxODVWMTMuMzUyNkM0Mi43NDU4IDExLjUwMSA0MS4yNDQ5IDEwIDM5LjM5MzIgMTBaIiBmaWxsPSIjN0U3Mjg0Ii8+CjxwYXRoIGQ9Ik00MC4zMjczIDEyLjYzMzhIMTIuNjQ3OVYzNS42NDAxSDQwLjMyNzNWMTIuNjMzOFoiIGZpbGw9IiMyQzEzMzgiLz4KPHBhdGggZD0iTTI2LjQ4OTIgMTIuMDA3OUMyNi44MTYgMTIuMDA3OSAyNy4wODEgMTEuNzQyOSAyNy4wODEgMTEuNDE2MUMyNy4wODEgMTEuMDg5MiAyNi44MTYgMTAuODI0MiAyNi40ODkyIDEwLjgyNDJDMjYuMTYyNSAxMC44MjQyIDI1Ljg5NzUgMTEuMDg5MiAyNS44OTc1IDExLjQxNjFDMjUuODk3NSAxMS43NDI5IDI2LjE2MjUgMTIuMDA3OSAyNi40ODkyIDEyLjAwNzlaIiBmaWxsPSIjNTQ0NjVFIi8+CjxwYXRoIGQ9Ik0yNi40ODI0IDI2Ljk3ODhDMjguNjk2OSAyNi45Nzg4IDMwLjQ5MiAyNS4xODM3IDMwLjQ5MiAyMi45Njk0QzMwLjQ5MiAyMC43NTUxIDI4LjY5NjkgMTguOTYgMjYuNDgyNCAxOC45NkMyNC4yNjgyIDE4Ljk2IDIyLjQ3MjkgMjAuNzU1MSAyMi40NzI5IDIyLjk2OTRDMjIuNDcyOSAyNS4xODM3IDI0LjI2ODIgMjYuOTc4OCAyNi40ODI0IDI2Ljk3ODhaIiBmaWxsPSIjRTU3Q0Q4Ii8+CjxwYXRoIGQ9Ik0xNi4wNjg4IDI5LjM4NjdMMTcuNTMyOSAzNi45MTNDMTcuNjA0MyAzNy4yODE1IDE3LjgwMTggMzcuNjEzOCAxOC4wOTE2IDM3Ljg1M0MxOC4zODEyIDM4LjA5MiAxOC43NDQ5IDM4LjIyMjggMTkuMTIwNCAzOC4yMjMxQzE5LjM0MDkgMzguMjIzNCAxOS41NTkgMzguMTc4OSAxOS43NjE2IDM4LjA5MTdDMTkuOTY0MiAzOC4wMDQ4IDIwLjE0NjggMzcuODc3MyAyMC4yOTg2IDM3LjcxNzFDMjAuNDUgMzcuNTU2OCAyMC41NjcyIDM3LjM2NzYgMjAuNjQyOSAzNy4xNjA0QzIwLjcxODYgMzYuOTUzMiAyMC43NTEgMzYuNzMyOCAyMC43Mzg2IDM2LjUxMjZMMjAuNDc4NSAzMS4wMTUxTDE2LjA2ODggMjkuMzg2N1oiIGZpbGw9IiNFNkIyNkUiLz4KPHBhdGggZD0iTTEyLjAxMTcgMzAuMzg4OUwxMy42ODggMzcuMDQ2QzEzLjc3MTIgMzcuMzc2OCAxMy45NjI0IDM3LjY3MDIgMTQuMjMxNSAzNy44Nzk4QzE0LjUwMDQgMzguMDg5MSAxNC44MzE2IDM4LjIwMyAxNS4xNzI2IDM4LjIwMjNDMTUuMzkxNiAzOC4yMDIgMTUuNjA4MSAzOC4xNTQ4IDE1LjgwNzEgMzguMDYzOUMxNi4wMDY0IDM3Ljk3MjggMTYuMTgzOSAzNy44NDAxIDE2LjMyNzQgMzcuNjc0OEMxNi40NzEgMzcuNTA5NCAxNi41Nzc2IDM3LjMxNTMgMTYuNjM5NyAzNy4xMDU0QzE2LjcwMjEgMzYuODk1NSAxNi43MTg0IDM2LjY3NDcgMTYuNjg4MSAzNi40NTc2TDE1Ljc5MiAzMC4wODc5TDEyLjAxMTcgMzAuMzg4OVoiIGZpbGw9IiNFNkIyNkUiLz4KPHBhdGggZD0iTTExLjIzNTEgMzAuNjk2N0wxMi42ODkgMzYuMTcwNkMxMi43NTU1IDM2LjQxMTMgMTIuNzY1MyAzNi42NjQ1IDEyLjcxNzcgMzYuOTEwMkMxMi42NzAxIDM3LjE1NTUgMTIuNTY2NCAzNy4zODY1IDEyLjQxNDcgMzcuNTg1NUMxMi4yNjMgMzcuNzg0MiAxMi4wNjc0IDM3Ljk0NSAxMS44NDMyIDM4LjA1NTlDMTEuNjE5IDM4LjE2NjQgMTEuMzcyMiAzOC4yMjM2IDExLjEyMjIgMzguMjIzQzEwLjc4NDEgMzguMjIzIDEwLjQ1NDQgMzguMTE3NiAxMC4xNzkxIDM3LjkyMTRDOS45MDM3NiAzNy43MjUxIDkuNjk2NDggMzcuNDQ4IDkuNTg2MTggMzcuMTI4Mkw3LjEyNjQ2IDI5Ljk2NDhMMTAuODY5MSAyOS41MzAzTDExLjIzNTEgMzAuNjk2N1oiIGZpbGw9IiNFNkIyNkUiLz4KPHBhdGggZD0iTTYuMzc3MzcgMjkuODcyMUw4LjIwNDE3IDM0Ljg3MDFDOC4yNzIwNyAzNS4wNTczIDguMzAwMjEgMzUuMjU2NSA4LjI4NjgyIDM1LjQ1NTJDOC4yNzM0NCAzNS42NTM5IDguMjE4ODMgMzUuODQ3NCA4LjEyNjQ2IDM2LjAyNEM4LjAzNDA5IDM2LjIwMDIgNy45MDYwMSAzNi4zNTU2IDcuNzUwMzQgMzYuNDc5NUM3LjU5NDY3IDM2LjYwMzYgNy40MTQ4NyAzNi42OTQyIDcuMjIyMzQgMzYuNzQ0OEM2LjkwMTE5IDM2LjgyODcgNi41NjA5IDM2Ljc5ODQgNi4yNTk1NiAzNi42NTk0QzUuOTU4MjEgMzYuNTIwMSA1LjcxNDUgMzYuMjgwOCA1LjU3MDAxIDM1Ljk4MTlMMi42MjQ1MSAyOS44NzIxSDYuMzc3MzdaIiBmaWxsPSIjRTZCMjZFIi8+CjxwYXRoIGQ9Ik03LjQwMzUzIDIyLjg2MjVDOS40OTE1OCAyMi44NTc3IDExLjU1MjcgMjMuMzMyOSAxMy40Mjc5IDI0LjI1MTRMMjIuMjU3NiAyOC42MDYzQzIyLjUyMTcgMjguNzM2OSAyMi43NTcgMjguOTE4OSAyMi45NDk5IDI5LjE0MTdDMjMuMTQyNSAyOS4zNjQ1IDIzLjI4ODggMjkuNjIzNyAyMy4zOCAyOS45MDM4QzIzLjQ3MTEgMzAuMTg0IDIzLjUwNTQgMzAuNDc5NiAyMy40ODA1IDMwLjc3MzFDMjMuNDU2IDMxLjA2NjggMjMuMzcyNyAzMS4zNTI0IDIzLjIzNTggMzEuNjEzNUMyMi45ODIzIDMyLjEwMTcgMjIuNTU1NiAzMi40Nzc1IDIyLjAzOTIgMzIuNjY3NEMyMS41MjI2IDMyLjg1NzMgMjAuOTUzOCAzMi44NDc2IDIwLjQ0NDQgMzIuNjM5NkwxNy4xODc4IDMxLjMwNTVDMTYuNTIzNiAzMS4wMzE3IDE1Ljc5NzYgMzAuOTQzIDE1LjA4NzEgMzEuMDQ5TDEzLjUzNCAzMS4yNzgyQzEyLjE2MzQgMzEuNDc5OSAxMC43NzE0IDMxLjQ5MDIgOS4zOTggMzEuMzA4OEM4LjA5Njc0IDMxLjEzOCA2Ljc3ODc3IDMxLjEzOCA1LjQ3NzUxIDMxLjMwODhMNC40NTEyMiAzMS40NDI0QzMuNDc4NjIgMzEuNTY2MiAyLjQ5NDcgMzEuMzI0IDEuNjkwOTggMzAuNzYyNUMwLjg4NzI1MyAzMC4yMDEgMC4zMjEyNDMgMjkuMzYwNCAwLjEwMzEyNSAyOC40MDQ1Qy0wLjEwNjUxMyAyNy41MDU0IDAuMDA1NjA0MyAyNi41NjEyIDAuNDIwMDA0IDI1LjczNjJDMC44MzQ0MDQgMjQuOTExMiAxLjUyNDgzIDI0LjI1NzUgMi4zNzEyNSAyMy44ODg4QzMuOTU5OTUgMjMuMjAzMyA1LjY3MzI4IDIyLjg1MzkgNy40MDM1MyAyMi44NjI1WiIgZmlsbD0iI0ZGREU5MSIvPgo8cGF0aCBkPSJNNDcuNjAzNyAzOC4yMUg1LjM4ODU1QzUuMTcwNTkgMzguMjEyNyA0Ljk1ODE2IDM4LjI3OSA0Ljc3NzU3IDM4LjQwMTFDNC41OTY5NSAzOC41MjMxIDQuNDU2MDkgMzguNjk1NCA0LjM3MjM4IDM4Ljg5NjhDNC4yODg2NyAzOS4wOTgyIDQuMjY1NzcgMzkuMzE5NiA0LjMwNjU0IDM5LjUzMzhDNC4zNDczIDM5Ljc0NzkgNC40NDk5NCAzOS45NDUzIDQuNjAxNzMgNDAuMTAxNkw2LjUxMDY3IDQyLjA2NTNDNi42NjI1OCA0Mi4yMjI1IDYuODQ0MyA0Mi4zNDc5IDcuMDQ1MTUgNDIuNDM0MkM3LjI0NjAxIDQyLjUyMDggNy40NjIwNCA0Mi41NjYzIDcuNjgwNjQgNDIuNTY4NEg0NS4zMTE3QzQ1LjUzMjggNDIuNTY4MSA0NS43NTExIDQyLjUyMzMgNDUuOTU0NyA0Mi40MzY5QzQ2LjE1NzkgNDIuMzUwNiA0Ni4zNDE3IDQyLjIyNDMgNDYuNDk1MyA0Mi4wNjUzTDQ4LjQwNDIgNDAuMTAxNkM0OC41NTY4IDM5Ljk0NDQgNDguNjU5OCAzOS43NDU4IDQ4LjcwMDEgMzkuNTMwNEM0OC43NDAzIDM5LjMxNDggNDguNzE2NCAzOS4wOTI1IDQ4LjYzMSAzOC44OTA1QzQ4LjU0NTYgMzguNjg4OCA0OC40MDI3IDM4LjUxNjUgNDguMjIgMzguMzk1NkM0OC4wMzcxIDM4LjI3NDUgNDcuODIzIDM4LjIxIDQ3LjYwMzcgMzguMjFaIiBmaWxsPSIjMkMxMzM4Ii8+CjxwYXRoIGQ9Ik0zNi45MjM2IDI5LjM4NjdMMzUuNDU5MiAzNi45MTNDMzUuMzg3OCAzNy4yODE1IDM1LjE5MDMgMzcuNjEzOCAzNC45MDA4IDM3Ljg1M0MzNC42MTEyIDM4LjA5MiAzNC4yNDc1IDM4LjIyMjggMzMuODcyIDM4LjIyMzFDMzMuNjUxNSAzOC4yMjM0IDMzLjQzMzEgMzguMTc4OSAzMy4yMzA1IDM4LjA5MTdDMzMuMDI3OSAzOC4wMDQ4IDMyLjg0NTMgMzcuODc3MyAzMi42OTM5IDM3LjcxNzFDMzIuNTQyNCAzNy41NTY4IDMyLjQyNTIgMzcuMzY3NiAzMi4zNDk1IDM3LjE2MDRDMzIuMjczOCAzNi45NTMyIDMyLjI0MTQgMzYuNzMyOCAzMi4yNTM4IDM2LjUxMjZMMzIuNTE0IDMxLjAxNTFMMzYuOTIzNiAyOS4zODY3WiIgZmlsbD0iI0U2QjI2RSIvPgo8cGF0aCBkPSJNNDAuOTgxIDMwLjM4ODlMMzkuMzA0NyAzNy4wNDZDMzkuMjIxNCAzNy4zNzY4IDM5LjAzMDMgMzcuNjcwMiAzOC43NjEgMzcuODc5OEMzOC40OTIxIDM4LjA4OTEgMzguMTYwOCAzOC4yMDMgMzcuODE5OCAzOC4yMDIzQzM3LjYwMDggMzguMjAyIDM3LjM4NDYgMzguMTU0OCAzNy4xODUzIDM4LjA2MzlDMzYuOTg2IDM3Ljk3MjggMzYuODA4OCAzNy44NDAxIDM2LjY2NTMgMzcuNjc0OEMzNi41MjE0IDM3LjUwOTQgMzYuNDE1MSAzNy4zMTUzIDM2LjM1MjcgMzcuMTA1NEMzNi4yOTA2IDM2Ljg5NTUgMzYuMjc0IDM2LjY3NDcgMzYuMzA0MyAzNi40NTc2TDM3LjIwMDcgMzAuMDg3OUw0MC45ODEgMzAuMzg4OVoiIGZpbGw9IiNFNkIyNkUiLz4KPHBhdGggZD0iTTQxLjc1NzUgMzAuNjk2N0w0MC4zMDM0IDM2LjE3MDZDNDAuMjM3MSAzNi40MTEzIDQwLjIyNzEgMzYuNjY0NSA0MC4yNzQ3IDM2LjkxMDJDNDAuMzIyMiAzNy4xNTU1IDQwLjQyNjEgMzcuMzg2NSA0MC41Nzc4IDM3LjU4NTVDNDAuNzI5NiAzNy43ODQyIDQwLjkyNDkgMzcuOTQ1IDQxLjE0OTMgMzguMDU1OUM0MS4zNzM0IDM4LjE2NjQgNDEuNjIwMyAzOC4yMjM2IDQxLjg3MDEgMzguMjIzQzQyLjIwODQgMzguMjIzIDQyLjUzNzkgMzguMTE3NiA0Mi44MTM1IDM3LjkyMTRDNDMuMDg4OCAzNy43MjUxIDQzLjI5NiAzNy40NDggNDMuNDA2MiAzNy4xMjgyTDQ1Ljg2NiAyOS45NjQ4TDQyLjEyMzMgMjkuNTMwM0w0MS43NTc1IDMwLjY5NjdaIiBmaWxsPSIjRTZCMjZFIi8+CjxwYXRoIGQ9Ik00Ni42MTU0IDI5Ljg3MjFMNDQuNzg4NSAzNC44NzAxQzQ0LjcyMDcgMzUuMDU3MyA0NC42OTI1IDM1LjI1NjUgNDQuNzA1OSAzNS40NTUyQzQ0LjcxOTIgMzUuNjUzOSA0NC43NzM3IDM1Ljg0NzQgNDQuODY2MSAzNi4wMjRDNDQuOTU4NCAzNi4yMDAyIDQ1LjA4NjUgMzYuMzU1NiA0NS4yNDIyIDM2LjQ3OTVDNDUuMzk3OSAzNi42MDM2IDQ1LjU3NzggMzYuNjk0MiA0NS43NzA0IDM2Ljc0NDhDNDYuMDkxNCAzNi44Mjg3IDQ2LjQzMTggMzYuNzk4NCA0Ni43MzMyIDM2LjY1OTRDNDcuMDM0NSAzNi41MjAxIDQ3LjI3OCAzNi4yODA4IDQ3LjQyMjggMzUuOTgxOUw1MC4zNjgxIDI5Ljg3MjFINDYuNjE1NFoiIGZpbGw9IiNFNkIyNkUiLz4KPHBhdGggZD0iTTQ1LjU4ODggMjIuODYyNUM0My40OTk0IDIyLjg2MzEgNDEuNDM4MSAyMy4zNDQxIDM5LjU2NDMgMjQuMjY4NUwzMC43MzQ4IDI4LjYwNjNDMzAuNDcwOCAyOC43MzY5IDMwLjIzNTEgMjguOTE4OSAzMC4wNDI1IDI5LjE0MTdDMjkuODQ5OSAyOS4zNjQ1IDI5LjcwMzYgMjkuNjIzNyAyOS42MTI1IDI5LjkwMzhDMjkuNTIxMyAzMC4xODQgMjkuNDg3MSAzMC40Nzk2IDI5LjUxMTYgMzAuNzczMUMyOS41MzY0IDMxLjA2NjggMjkuNjE5NyAzMS4zNTI0IDI5Ljc1NjMgMzEuNjEzNUMzMC4wMDk4IDMyLjEwMTcgMzAuNDM2OCAzMi40Nzc1IDMwLjk1MzIgMzIuNjY3NEMzMS40Njk2IDMyLjg1NzMgMzIuMDM4MyAzMi44NDc2IDMyLjU0ODEgMzIuNjM5NkwzNS44MDQ3IDMxLjMwNTVDMzYuNDY4OCAzMS4wMzE3IDM3LjE5NDggMzAuOTQzIDM3LjkwNTMgMzEuMDQ5TDM5LjQ1ODMgMzEuMjc4MkM0MC44MjkxIDMxLjQ3OTkgNDIuMjIxIDMxLjQ5MDIgNDMuNTk0NSAzMS4zMDg4QzQ0Ljg5NTUgMzEuMTM4IDQ2LjIxMzYgMzEuMTM4IDQ3LjUxNSAzMS4zMDg4TDQ4LjU0MSAzMS40NDI0QzQ5LjUxMzggMzEuNTY4NCA1MC40OTg3IDMxLjMyNzkgNTEuMzAzNyAzMC43Njc2QzUyLjEwODcgMzAuMjA3MyA1Mi42NzY2IDI5LjM2NzMgNTIuODk2MSAyOC40MTE0QzUzLjEwNjkgMjcuNTEwNCA1Mi45OTQ5IDI2LjU2NCA1Mi41NzkgMjUuNzM3NEM1Mi4xNjMyIDI0LjkxMDggNTEuNDcwMyAyNC4yNTY1IDUwLjYyMTEgMjMuODg4OEM0OS4wMzIzIDIzLjIwMzMgNDcuMzE5IDIyLjg1MzkgNDUuNTg4OCAyMi44NjI1WiIgZmlsbD0iI0ZGREU5MSIvPgo8L3N2Zz4K" alt="">
             <div>
-                <h4>Key features</h4>
-                <p>View features by need, from time tracking to project and team management</p>
+                <h4>Desktop apps</h4>
+                <p>Launch right from your Windows, Mac, or Linux machine</p>
             </div>
         </div>
         <div>
-            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAiIGhlaWdodD0iNTUiIHZpZXdCb3g9IjAgMCA1MCA1NSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjIyLjgzMDIiIGhlaWdodD0iMjIuODMwMiIgZmlsbD0iI0RENkZEMSIvPgo8cmVjdCB4PSIyNi45ODE0IiB5PSI1LjE4OTQ1IiB3aWR0aD0iMjIuODMwMiIgaGVpZ2h0PSIyMi44MzAyIiBmaWxsPSIjNDEyQTRDIi8+CjxyZWN0IHk9IjI2Ljk4MDUiIHdpZHRoPSIyMi44MzAyIiBoZWlnaHQ9IjIyLjgzMDIiIGZpbGw9IiM0MTJBNEMiLz4KPHJlY3QgeD0iMjYuOTgxNCIgeT0iMzIuMTY5OSIgd2lkdGg9IjIyLjgzMDIiIGhlaWdodD0iMjIuODMwMiIgZmlsbD0iI0RENkZEMSIvPgo8L3N2Zz4K" alt="">
+            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTMiIGhlaWdodD0iNTMiIHZpZXdCb3g9IjAgMCA1MyA1MyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTQyLjcxMjYgMEgxMS4xODE3QzkuNDI0NDkgMCA4IDEuNDI0NDggOCAzLjE4MTY4VjI3LjYzNDdDOCAyOS4zOTE5IDkuNDI0NDkgMzAuODE2NCAxMS4xODE3IDMwLjgxNjRINDIuNzEyNkM0NC40Njk4IDMwLjgxNjQgNDUuODk0MyAyOS4zOTE5IDQ1Ljg5NDMgMjcuNjM0N1YzLjE4MTY4QzQ1Ljg5NDMgMS40MjQ0OCA0NC40Njk4IDAgNDIuNzEyNiAwWiIgZmlsbD0id2hpdGUiLz4KPHBhdGggZD0iTTQ1Ljg5NDMgNC40MjI3Nkg4VjIuMjExMzhDOCAxLjkyMDk4IDguMDU3MiAxLjYzMzQyIDguMTY4MzMgMS4zNjUxMkM4LjI3OTQ2IDEuMDk2ODIgOC40NDIzNSAwLjg1MzA0MyA4LjY0NzcgMC42NDc2OTdDOC44NTMwNCAwLjQ0MjM1MiA5LjA5NjgyIDAuMjc5NDYzIDkuMzY1MTIgMC4xNjgzMzFDOS42MzM0MiAwLjA1NzE5ODggOS45MjA5OCAwIDEwLjIxMTQgMEg0My42ODI5QzQ0LjI2OTQgMCA0NC44MzE5IDAuMjMyOTg0IDQ1LjI0NjYgMC42NDc2OTdDNDUuNjYxMyAxLjA2MjQxIDQ1Ljg5NDMgMS42MjQ4OCA0NS44OTQzIDIuMjExMzhWNC40MjI3NloiIGZpbGw9IiM3RTcyODQiLz4KPHBhdGggZD0iTTEwLjIwMzggMi45NzE1M0MxMC42MjM0IDIuOTcxNTMgMTAuOTYzNSAyLjYzMTQxIDEwLjk2MzUgMi4yMTE4NEMxMC45NjM1IDEuNzkyMjcgMTAuNjIzNCAxLjQ1MjE1IDEwLjIwMzggMS40NTIxNUM5Ljc4NDIyIDEuNDUyMTUgOS40NDQwOSAxLjc5MjI3IDkuNDQ0MDkgMi4yMTE4NEM5LjQ0NDA5IDIuNjMxNDEgOS43ODQyMiAyLjk3MTUzIDEwLjIwMzggMi45NzE1M1oiIGZpbGw9IiNFNTdDRDgiLz4KPHBhdGggZD0iTTEyLjgxNzggMi45NzE1M0MxMy4yMzc0IDIuOTcxNTMgMTMuNTc3NSAyLjYzMTQxIDEzLjU3NzUgMi4yMTE4NEMxMy41Nzc1IDEuNzkyMjcgMTMuMjM3NCAxLjQ1MjE1IDEyLjgxNzggMS40NTIxNUMxMi4zOTgyIDEuNDUyMTUgMTIuMDU4MSAxLjc5MjI3IDEyLjA1ODEgMi4yMTE4NEMxMi4wNTgxIDIuNjMxNDEgMTIuMzk4MiAyLjk3MTUzIDEyLjgxNzggMi45NzE1M1oiIGZpbGw9IiNGRkRFOTEiLz4KPHBhdGggZD0iTTE1LjM0MTUgMi45NzE1M0MxNS43NjEgMi45NzE1MyAxNi4xMDEyIDIuNjMxNDEgMTYuMTAxMiAyLjIxMTg0QzE2LjEwMTIgMS43OTIyNyAxNS43NjEgMS40NTIxNSAxNS4zNDE1IDEuNDUyMTVDMTQuOTIxOSAxLjQ1MjE1IDE0LjU4MTggMS43OTIyNyAxNC41ODE4IDIuMjExODRDMTQuNTgxOCAyLjYzMTQxIDE0LjkyMTkgMi45NzE1MyAxNS4zNDE1IDIuOTcxNTNaIiBmaWxsPSIjNDM0MjQ0Ii8+CjxwYXRoIGQ9Ik0yNi42Mjc1IDIyLjQwMzRDMjkuNTkxNCAyMi40MDM0IDMxLjk5NDIgMjAuMDAwNiAzMS45OTQyIDE3LjAzNjdDMzEuOTk0MiAxNC4wNzI3IDI5LjU5MTQgMTEuNjY5OSAyNi42Mjc1IDExLjY2OTlDMjMuNjYzNSAxMS42Njk5IDIxLjI2MDcgMTQuMDcyNyAyMS4yNjA3IDE3LjAzNjdDMjEuMjYwNyAyMC4wMDA2IDIzLjY2MzUgMjIuNDAzNCAyNi42Mjc1IDIyLjQwMzRaIiBmaWxsPSIjRTU3Q0Q4Ii8+CjxwYXRoIGQ9Ik0yMy4xMTQ4IDMzLjE5MzdDMjMuMTE0OCAzMy4xOTM3IDIzLjIyNzYgMjcuODA0NCAyMy4zNDA0IDI0LjYxMTVDMjMuNDA0MyAyMi44NzAyIDIzLjU2NjEgMTkuOTcwNiAyMy43MTY1IDE3LjY4NzdDMjMuNzQxNiAxNy4yNTc2IDIzLjg1NTkgMTYuODM3NSAyNC4wNTIzIDE2LjQ1NEMyNC4yNDg3IDE2LjA3MDYgMjQuNTIyOCAxNS43MzIyIDI0Ljg1NzEgMTUuNDYwNUMyNS4xOTE0IDE1LjE4ODggMjUuNTc4NyAxNC45ODk3IDI1Ljk5NDIgMTQuODc1OUMyNi40MDk3IDE0Ljc2MiAyNi44NDQ0IDE0LjczNiAyNy4yNzA1IDE0Ljc5OTRWMTQuNzk5NEMyOC4wMDM0IDE0LjkxMTYgMjguNjcyIDE1LjI4MjMgMjkuMTU1NSAxNS44NDQ0QzI5LjYzOSAxNi40MDY1IDI5LjkwNTUgMTcuMTIzIDI5LjkwNjggMTcuODY0NVYzMS4yMTU1QzI5LjkwNjYgMzEuNzU2IDMwLjEwODggMzIuMjc3IDMwLjQ3MzUgMzIuNjc1OUMzMC44MzgzIDMzLjA3NDcgMzEuMzM5MiAzMy4zMjI1IDMxLjg3NzUgMzMuMzcwNUwzMi42MDM0IDMzLjQzNDRDMzMuNDYzNSAzMy41MTI5IDM0LjI4NzUgMzMuODE3OCAzNC45OTE1IDM0LjMxODJMMzUuMTA0MyAzNC40MDA5QzM1LjYyMDggMzQuNzY5NSAzNi4yMDQ4IDM1LjAzMjggMzYuODIzIDM1LjE3NTdDMzcuOTE1MSAzNS40MzIgMzguODg1NyAzNi4wNTYxIDM5LjU3MjIgMzYuOTQzM0MzOS45NjY0IDM3LjQ1MDQgNDAuMjQ3OCAzOC4wMzU4IDQwLjM5NzYgMzguNjYwM0M0MC41NDc0IDM5LjI4NDkgNDAuNTYyMiAzOS45MzQyIDQwLjQ0MSA0MC41NjVMNDAuMjg2OCA0MS4zNzM1QzM5Ljg0OTUgNDMuNjczNCAzOC45ODA1IDQ1Ljg2OTYgMzcuNzI1NiA0Ny44NDZWNDcuODQ2QzM2LjY4NDYgNDkuNDkwMSAzNS4yMjkxIDUwLjgzMTIgMzMuNTA1MyA1MS43MzQzQzMxLjc4MTYgNTIuNjM3NCAyOS44NTA0IDUzLjA3MDggMjcuOTA2MSA1Mi45OTA4QzI1Ljg4NzIgNTIuOTA2NiAyMy45Mjk4IDUyLjI3MiAyMi4yNDU0IDUxLjE1NThDMjAuNTYxMSA1MC4wMzk1IDE5LjIxNCA0OC40ODQgMTguMzQ5OCA0Ni42NTc1TDE3LjQxNzEgNDQuNjkwNkMxNy4wMjE5IDQzLjg1NTEgMTYuNDcxOSA0My4xMDIyIDE1Ljc5NjEgNDIuNDcxN1Y0Mi40NzE3QzE1LjA5NjQgNDEuODE2NiAxNC41MzE3IDQxLjAzMDggMTQuMTMzOCA0MC4xNTg4TDEzLjk2NDYgMzkuNzgyN0MxMy42OTQyIDM5LjE5MjMgMTMuMzQ3OCAzOC42Mzk4IDEyLjkzNDEgMzguMTM5MkwxMC43Mzc4IDM1LjUwNjZDMTAuNDAxNiAzNS4xMDA5IDEwLjIxMzMgMzQuNTkyOSAxMC4yMDM4IDM0LjA2NkMxMC4xOTQyIDMzLjUzOTIgMTAuMzYzOSAzMy4wMjQ3IDEwLjY4NTIgMzIuNjA3VjMyLjYwN0MxMC45NjE4IDMyLjI1MTMgMTEuMzM2IDMxLjk4MzggMTEuNzYyIDMxLjgzNjlDMTIuMTg4IDMxLjY5IDEyLjY0NzUgMzEuNjcwMSAxMy4wODQ2IDMxLjc3OTZDMTQuNzgxOCAzMi4yMDE2IDE2LjI3NzUgMzMuMjA1IDE3LjMxMTggMzQuNjE1M0wxOS44NDY2IDM4LjA3MTVDMjAuMDU1NCAzOC4zNTcgMjAuMzQ3NyAzOC41NzA2IDIwLjY4MzEgMzguNjgyOEMyMS4wMTg1IDM4Ljc5NSAyMS4zODA1IDM4LjgwMDIgMjEuNzE5IDM4LjY5NzhDMjIuMDU3NSAzOC41OTU1IDIyLjM1NTkgMzguMzkwNSAyMi41NzI5IDM4LjExMTJDMjIuNzg5OSAzNy44MzE5IDIyLjkxNDkgMzcuNDkyMiAyMi45MzA1IDM3LjEzODhMMjMuMTE0OCAzMy4xOTM3WiIgZmlsbD0iIzY4MzcyRSIvPgo8L3N2Zz4K" alt="">
             <div>
-                <h4>Key features</h4>
-                <p>View features by need, from time tracking to project and team management</p>
-            </div>
-        </div>
-        <div>
-            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAiIGhlaWdodD0iNTUiIHZpZXdCb3g9IjAgMCA1MCA1NSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjIyLjgzMDIiIGhlaWdodD0iMjIuODMwMiIgZmlsbD0iI0RENkZEMSIvPgo8cmVjdCB4PSIyNi45ODE0IiB5PSI1LjE4OTQ1IiB3aWR0aD0iMjIuODMwMiIgaGVpZ2h0PSIyMi44MzAyIiBmaWxsPSIjNDEyQTRDIi8+CjxyZWN0IHk9IjI2Ljk4MDUiIHdpZHRoPSIyMi44MzAyIiBoZWlnaHQ9IjIyLjgzMDIiIGZpbGw9IiM0MTJBNEMiLz4KPHJlY3QgeD0iMjYuOTgxNCIgeT0iMzIuMTY5OSIgd2lkdGg9IjIyLjgzMDIiIGhlaWdodD0iMjIuODMwMiIgZmlsbD0iI0RENkZEMSIvPgo8L3N2Zz4K" alt="">
-            <div>
-                <h4>Key features</h4>
-                <p>View features by need, from time tracking to project and team management</p>
-            </div>
-        </div>
-        <div>
-            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAiIGhlaWdodD0iNTUiIHZpZXdCb3g9IjAgMCA1MCA1NSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjIyLjgzMDIiIGhlaWdodD0iMjIuODMwMiIgZmlsbD0iI0RENkZEMSIvPgo8cmVjdCB4PSIyNi45ODE0IiB5PSI1LjE4OTQ1IiB3aWR0aD0iMjIuODMwMiIgaGVpZ2h0PSIyMi44MzAyIiBmaWxsPSIjNDEyQTRDIi8+CjxyZWN0IHk9IjI2Ljk4MDUiIHdpZHRoPSIyMi44MzAyIiBoZWlnaHQ9IjIyLjgzMDIiIGZpbGw9IiM0MTJBNEMiLz4KPHJlY3QgeD0iMjYuOTgxNCIgeT0iMzIuMTY5OSIgd2lkdGg9IjIyLjgzMDIiIGhlaWdodD0iMjIuODMwMiIgZmlsbD0iI0RENkZEMSIvPgo8L3N2Zz4K" alt="">
-            <div>
-                <h4>Key features</h4>
-                <p>View features by need, from time tracking to project and team management</p>
+                <h4>100+ integrations</h4>
+                <p>Explore our native integrations or track time via browser extentions</p>
             </div>
         </div>
     </div>
+    </div>
+    <div id="track_info">
+        <button id="back_track">Back</button>
+        <h3>TIME TRACKING FOR EVERY TEAM SIZE</h3>
+        <div>
+            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTQiIGhlaWdodD0iNTMiIHZpZXdCb3g9IjAgMCA1NCA1MyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGxpbmUgeDE9IjEuMTA0MTciIHkxPSItMS4xMDQxNyIgeDI9IjcuNjQyNTciIHkyPSItMS4xMDQxNyIgdHJhbnNmb3JtPSJtYXRyaXgoMC43MDEzOTcgLTAuNzEyNzcxIDAuNzIxODkzIDAuNjkyMDA0IDM5LjY0NiAxNC43NzE1KSIgc3Ryb2tlPSIjRTg4OURDIiBzdHJva2Utd2lkdGg9IjIuMjA4MzQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8bGluZSB4MT0iMS4xMDQxNyIgeTE9Ii0xLjEwNDE3IiB4Mj0iMTQuMTE0NiIgeTI9Ii0xLjEwNDE3IiB0cmFuc2Zvcm09Im1hdHJpeCgwLjk0MzE5NCAtMC4zMzIyNDEgMC4zNDAwNTMgMC45NDA0MDYgMzkuNjQ2IDIwLjEzMjgpIiBzdHJva2U9IiNERDZGRDEiIHN0cm9rZS13aWR0aD0iMi4yMDgzNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CjxsaW5lIHgxPSIxLjEwNDE3IiB5MT0iLTEuMTA0MTciIHgyPSI3LjY4NDU0IiB5Mj0iLTEuMTA0MTciIHRyYW5zZm9ybT0ibWF0cml4KC0wLjkyNTA1OCAtMC4zNzk4MjcgMC4zODg0MDUgLTAuOTIxNDg5IDkuMTMwMTMgMTUuMjg1MikiIHN0cm9rZT0iI0U4ODlEQyIgc3Ryb2tlLXdpZHRoPSIyLjIwODM0IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPGxpbmUgeDE9IjEuMTA0MTciIHkxPSItMS4xMDQxNyIgeDI9IjE0LjAyNDkiIHkyPSItMS4xMDQxNyIgdHJhbnNmb3JtPSJtYXRyaXgoLTAuNjYzNzkyIC0wLjc0NzkxNyAwLjc1NjQ3NCAtMC42NTQwMjQgMTQuMTgwOSAxMy4zMTU0KSIgc3Ryb2tlPSIjREQ2RkQxIiBzdHJva2Utd2lkdGg9IjIuMjA4MzQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8cGF0aCBkPSJNMzIuMDU1NCAxNC40MzYxSDI0LjU0MjZMMTAuNTM2NiAyOC4wNjY0TDE2Ljg2ODggMzQuNjY2OUwyMi45MzI3IDI4LjgxNzdWNTJIMzIuMDU1NFYxNC40MzYxWiIgZmlsbD0iIzQxMkE0QyIvPgo8L3N2Zz4K" alt="">
+            <div>
+                <h4>For freelancers and solo users</h4>
+                <p>For solo entrepreneurs with a growing list of clients</p>
+            </div>
+        </div>
+        <div>
+            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTMiIGhlaWdodD0iNTMiIHZpZXdCb3g9IjAgMCA1MyA1MyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPG1hc2sgaWQ9Im1hc2swXzEwNjBfMTU3NiIgc3R5bGU9Im1hc2stdHlwZTphbHBoYSIgbWFza1VuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeD0iMiIgeT0iMCIgd2lkdGg9IjUwIiBoZWlnaHQ9IjUzIj4KPHJlY3QgeD0iMiIgd2lkdGg9IjQ5LjkxMjYiIGhlaWdodD0iNTMiIGZpbGw9IiNDNEM0QzQiLz4KPC9tYXNrPgo8ZyBtYXNrPSJ1cmwoI21hc2swXzEwNjBfMTU3NikiPgo8Y2lyY2xlIGN4PSI0MC44NDkyIiBjeT0iMzYuOTIyMiIgcj0iMy42NzEyMSIgZmlsbD0iI0VEQTNFNCIvPgo8Y2lyY2xlIGN4PSI0Ni4wOTM5IiBjeT0iNDYuMzYxNSIgcj0iMS41NzMzOCIgZmlsbD0iI0U1N0NEOCIvPgo8Y2lyY2xlIGN4PSI4LjMzMjY4IiBjeT0iMTAuNjk5NiIgcj0iNC43MjAxMyIgZmlsbD0iIzU2NDI2MCIvPgo8cGF0aCBkPSJNMTguOTkyNSAxNi42MDQzTDI3LjIwOCAxOS41OTA1TDQ4Ljg0MjEgMjcuNDU0MUM1Mi4wNDc3IDIxLjE5MzkgNTQuOTUzNiA3LjM5OTMxIDQwLjkzMjUgMi4zMDI4OEMyNi45MTE0IC0yLjc5MzU1IDIwLjQ2MzcgOS43MTM2NSAxOC45OTI1IDE2LjYwNDNaIiBmaWxsPSIjNjgzNzJFIiBzdHJva2U9IiM2ODM3MkUiIHN0cm9rZS13aWR0aD0iMC4zNjEwNDciLz4KPGNpcmNsZSBjeD0iMzYuMDg0NSIgY3k9IjE1LjQ1NzciIHI9IjExLjQwMjciIHRyYW5zZm9ybT0icm90YXRlKDE5Ljk3NTMgMzYuMDg0NSAxNS40NTc3KSIgZmlsbD0id2hpdGUiLz4KPHBhdGggZD0iTTMwLjI4NjcgMTcuNzI2NUMzMC44MTQxIDIwLjEwNiAzNC40ODc4IDI0LjIyNTkgMzkuNjYxOCAyMC45MzUzIiBzdHJva2U9IiNGRkFDQTIiIHN0cm9rZS13aWR0aD0iMS4zMTI3MSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CjxwYXRoIGQ9Ik00OC41NDk5IDE3LjI3MzJMMjUuODg2NyA5LjAzNTUzTDI5Ljk0ODkgMS42ODk4OEwzOS4wMzYyIDIuNDA3MzFMNDcuMzczNCA2LjgzTDQ4LjU0OTkgMTcuMjczMloiIGZpbGw9IiM2ODM3MkUiLz4KPGNpcmNsZSBjeD0iMTguMjEyNiIgY3k9IjQwLjkxIiByPSIxMS43NjUxIiB0cmFuc2Zvcm09InJvdGF0ZSgtMjAuMzY1MiAxOC4yMTI2IDQwLjkxKSIgZmlsbD0id2hpdGUiLz4KPHBhdGggZD0iTTE1LjE2OTQgNDYuNTY1NkMxNy4xNzM0IDQ4LjA4NDcgMjIuODE0MyA0OC44NzEgMjQuNjg1NSA0Mi44Mjc0IiBzdHJva2U9IiNGRkFDQTIiIHN0cm9rZS13aWR0aD0iMS4yODgwOCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CjxwYXRoIGQ9Ik0yOS40NTc5IDM2LjU3MDVMMjYuMDE3MyAzMy42OTI1QzI1LjkzNTIgMzMuNDcxMSAyNS44MTczIDMzLjI2MyAyNS42ODM0IDMzLjA4NDlDMjQuODAxNSAzMS45MTMxIDIyLjkyOSAzMS42NDg3IDIxLjUxODMgMzIuNjI4MUMyMC4zNDYgMzMuNDQ3MSAxOC44OTIxIDM0LjMxMDYgMTcuMjA5NCAzNC45OTUyQzEzLjY1NzQgMzYuNDQ1NiAxMS4xMjg3IDM1LjAzMzcgMTAuMjI0NiAzNC4zODU4QzcuNjk1MTggMzUuNzA4NiA2LjQxMDggMzguNDg4IDcuMzE4NTUgNDAuOTMzNEw2Ljk3OTAxIDQ0LjkxNDhMNi4yOTg2NyA0My45MTQ1QzYuMjk4NjcgNDMuOTE0NSAxLjYwODc1IDM3Ljg0NzkgMi40OTU4NiAzNS4zMTE5QzMuMzcwOSAzMi44MTY0IDUuNTg0NjcgMzIuOTQyIDUuNTg0NjcgMzIuOTQyQzUuNTg0NjcgMzIuOTQyIDIuMzIxMTggMjcuNjUzMyA4Ljc0MDkxIDI1LjM5MDJDMTUuMTQ4NyAyMy4xMzE1IDI1Ljg2MzggMjYuNjAxNiAyNi45MTcgMjcuNTc3OUMyOC41NTQgMjkuMDY5IDI5LjQ1NzkgMzYuNTcwNSAyOS40NTc5IDM2LjU3MDVaIiBmaWxsPSIjNTY0MjYwIi8+CjwvZz4KPC9zdmc+Cg==" alt="">
+            <div>
+                <h4>For small teams</h4>
+                <p>For teams of less than 10 that need to track projects and bill clients</p>
+            </div>
+        </div>
+        <div>
+            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTMiIGhlaWdodD0iNTMiIHZpZXdCb3g9IjAgMCA1MyA1MyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iOC4yNjM2NCIgY3k9IjYuMjYzNjQiIHI9IjYuMjYzNjQiIGZpbGw9IiNFODg5REMiLz4KPGNpcmNsZSBjeD0iOC4yNjM2NCIgY3k9IjIxLjY4MTYiIHI9IjYuMjYzNjQiIGZpbGw9IiNFODg5REMiLz4KPGNpcmNsZSBjeD0iOC4yNjM2NCIgY3k9IjM3LjA5OTYiIHI9IjYuMjYzNjQiIGZpbGw9IiNFODg5REMiLz4KPGNpcmNsZSBjeD0iMjYuNTcyNyIgY3k9IjExLjA4MiIgcj0iNi4yNjM2NCIgZmlsbD0iI0VEQTNFNCIvPgo8Y2lyY2xlIGN4PSIyNi41NzI3IiBjeT0iMjYuNSIgcj0iNi4yNjM2NCIgZmlsbD0iI0VEQTNFNCIvPgo8Y2lyY2xlIGN4PSIyNi41NzI3IiBjeT0iNDEuOTE3OSIgcj0iNi4yNjM2NCIgZmlsbD0iI0VEQTNFNCIvPgo8Y2lyY2xlIGN4PSI0NC44ODE4IiBjeT0iMTUuODk5NCIgcj0iNi4yNjM2NCIgZmlsbD0iI0Y1Q0JFRiIvPgo8Y2lyY2xlIGN4PSI0NC44ODE4IiBjeT0iMzEuMzE3MyIgcj0iNi4yNjM2NCIgZmlsbD0iI0Y1Q0JFRiIvPgo8Y2lyY2xlIGN4PSI0NC44ODE4IiBjeT0iNDYuNzM1MyIgcj0iNi4yNjM2NCIgZmlsbD0iI0Y1Q0JFRiIvPgo8L3N2Zz4K" alt="">
+            <div>
+                <h4>For big teams</h4>
+                <p>For growing teams that need robust and flexible solutions for time and project tracking</p>
+            </div>
+        </div>
+        <h3 id="statement">Toogl Track stands against employee surveillance. Read our statement here. -></h3>
+        <div></div>
+    </div>
+    <div id="career_info">
+        <button id="back_career">Back</button>
+        <h3>WORK ON A PRODUCT THAT MATTERS TO MILLIONS</h3>
+        <div>
+            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTMiIGhlaWdodD0iNTMiIHZpZXdCb3g9IjAgMCA1MyA1MyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPG1hc2sgaWQ9Im1hc2swXzEwNjBfMTY3MiIgc3R5bGU9Im1hc2stdHlwZTphbHBoYSIgbWFza1VuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeD0iMCIgeT0iMCIgd2lkdGg9IjUzIiBoZWlnaHQ9IjUzIj4KPHJlY3Qgd2lkdGg9IjUzIiBoZWlnaHQ9IjUzIiBmaWxsPSIjQzRDNEM0Ii8+CjwvbWFzaz4KPGcgbWFzaz0idXJsKCNtYXNrMF8xMDYwXzE2NzIpIj4KPHJlY3QgeD0iMzIuNzIxOSIgeT0iMzUuMTY5OSIgd2lkdGg9IjMuMjgxNzMiIGhlaWdodD0iNS40Njk1NiIgdHJhbnNmb3JtPSJyb3RhdGUoLTQ1LjQ0MjQgMzIuNzIxOSAzNS4xNjk5KSIgZmlsbD0iI0U1N0NEOCIvPgo8cmVjdCB4PSIzOS45Mjk0IiB5PSIzNC40MjY4IiB3aWR0aD0iMTkuODAxOSIgaGVpZ2h0PSI3LjcwMDcyIiByeD0iMy44NTAzNiIgdHJhbnNmb3JtPSJyb3RhdGUoNDQuNTU3NiAzOS45Mjk0IDM0LjQyNjgpIiBmaWxsPSIjNTY0MjYwIi8+CjxjaXJjbGUgY3g9IjIwLjQ2ODIiIGN5PSIyMC40Njg0IiByPSIyMC4zNTE5IiB0cmFuc2Zvcm09InJvdGF0ZSgtNDUuMDk5OCAyMC40NjgyIDIwLjQ2ODQpIiBmaWxsPSIjNDEyQTRDIi8+CjxjaXJjbGUgY3g9IjIwLjQ2ODIiIGN5PSIyMC40Njc1IiByPSIxNS45NTE1IiB0cmFuc2Zvcm09InJvdGF0ZSgtNDUuMDk5OCAyMC40NjgyIDIwLjQ2NzUpIiBmaWxsPSIjRkRFNURDIi8+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjAuNjc1NiAxOC4zMzI2TDIzLjMyIDcuMTc2NzZMMTEuMzc3IDIyLjQ5NDZIMTkuNTgwOEwxNi45MzY0IDMzLjY1MDRMMjguODc5NSAxOC4zMzI2TDIwLjY3NTYgMTguMzMyNloiIGZpbGw9IiNFNTdDRDgiLz4KPC9nPgo8L3N2Zz4K" alt="">
+            <div>
+                <h4>Current job openings</h4>
+                <p>We are hiring! Apply by taking a skills test; no resume or CV required</p>
+            </div>
+        </div>
+        <div>
+            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTMiIGhlaWdodD0iNTQiIHZpZXdCb3g9IjAgMCA1MyA1NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMjYuNSIgY3k9IjI3IiByPSIyNi41IiBmaWxsPSIjRjdEOEYzIi8+CjxyZWN0IHg9IjExLjY1OTkiIHk9IjM5LjcyMDciIHdpZHRoPSIzMC43NCIgaGVpZ2h0PSI0LjI0IiByeD0iMi4xMiIgZmlsbD0iIzQxMkE0QyIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTQyLjgyOTQgMzcuNkgxMC42MjkzTDcuNDM3MzUgMjEuOTU3QzcuMzY5MTIgMjEuNjIzMSA3LjUwNDcxIDIxLjI4MDcgNy43ODMxOSAyMS4wODQyQzguMDYxMjUgMjAuODg3MiA4LjQyOTQxIDIwLjg3NDQgOC43MjExOSAyMS4wNTAzTDE5LjY5OTUgMjcuNjY3M0wyNS45NjA0IDE1LjA3QzI2LjEwNDEgMTQuNzgwOCAyNi4zOTg1IDE0LjU5NjMgMjYuNzIxNiAxNC41OTM4QzI3LjAyNTggMTQuNTkyNSAyNy4zNDE2IDE0Ljc3MDEgMjcuNDkwNSAxNS4wNTcyTDMzLjk1OSAyNy41NDM3TDQ0LjczNyAyMS4wNTA3QzQ1LjAyOTIgMjAuODc0OCA0NS4zOTY1IDIwLjg4ODEgNDUuNjc1IDIxLjA4NDZDNDUuOTUzNCAyMS4yODExIDQ2LjA4OSAyMS42MjM2IDQ2LjAyMTIgMjEuOTU3NEw0Mi44Mjk0IDM3LjZaIiBmaWxsPSIjRTU3Q0Q4Ii8+CjxjaXJjbGUgY3g9IjI2LjUwMDEiIGN5PSIxNC4yODA2IiByPSIzLjE4IiBmaWxsPSIjNDEyQTRDIi8+CjxjaXJjbGUgY3g9IjQ1LjU3OTkiIGN5PSIyMC42NDA5IiByPSIzLjE4IiBmaWxsPSIjNDEyQTRDIi8+CjxjaXJjbGUgY3g9IjcuNDE5OTkiIGN5PSIyMC42NDA5IiByPSIzLjE4IiBmaWxsPSIjNDEyQTRDIi8+CjxwYXRoIGQ9Ik0yNC41Nzk2IDMxLjg4ODZDMjQuNTc5NiAzMi44ODAxIDI0Ljc1MzEgMzMuNjQ0MSAyNS4wOTk2IDM0LjE2NDNDMjUuNjMyNSAzNC45NTg5IDI2LjIyNzcgMzUuNDgwMyAyNy42NzYxIDM1LjQ4MDNDMjguNTE1OCAzNS40ODAzIDI5LjIxODggMzUuMjgxMSAyOS42ODAxIDM1LjAxNThWMzIuMDUyNUMyOS40NjE0IDMyLjEzMyAyOS4yMzA2IDMyLjE3MjUgMjguOTk4NSAzMi4xNjkzQzI4LjQzOTUgMzIuMTY5MyAyOC4yMTAzIDMxLjk5MiAyOC4wMDM2IDMxLjcyMTJDMjcuODY5OCAzMS41NDM5IDI3LjgwMjkgMzEuMjg0MiAyNy44MDI5IDMwLjk0NjdWMjkuMzY5MUgyOS42ODAxVjI2LjU0MTZIMjcuODAyOVYyMy44MjAzSDI1LjQwNDVWMjQuODM3NEMyNS40MDQ1IDI1Ljk2NDUgMjQuNTcyNSAyNi44NzY1IDIzLjU0NjMgMjYuODc2NUMyMy40NzA3IDI2Ljg3NjggMjMuMzk1MSAyNi44NzIxIDIzLjMyMDEgMjYuODYyNVYyOS4zNjg1SDI0LjU3OTZWMzEuODg4NloiIGZpbGw9IiMyQzEzMzgiLz4KPC9zdmc+Cg==" alt="">
+            <div>
+                <h4>The Toggl Track Culture</h4>
+                <p>Learn more about our missions, vision and values</p>
+            </div>
+        </div>
+        <div></div>
+    </div>
     <script>
-        let count=0;
+        if (window.innerWidth>800){
+            let back_product = document.getElementById("back_product");
+            back_product.style.visibility="hidden";
+            let product = document.getElementById("product");
+            let product_info = document.getElementById("product_info")
+            let count = 0;
+            product.onclick = function (){
+                count++;
+                if(count%2==1){
+                    product_info.style.visibility="visible";
+                    product_info.style.position="fixed";    
+                }else{
+                    product_info.style.visibility="hidden";
+                }
+                
+            }
+        }
+    </script>
+</body>
+</html>
+<script>
+    let count=0;
         let details = document.getElementById("details");
         let product = document.getElementById("product");
         let product_info = document.getElementById("product_info");
-        details.style.display="none";
+        let track = document.getElementById("track");
+        let track_info = document.getElementById("track_info");
+        let career = document.getElementById("career");
+        let career_info = document.getElementById("career_info");
         product_info.style.display="none";
+        track_info.style.display="none";
+        career_info.style.display="none";
         function myFunction(x){
             x.classList.toggle("change");
             count++;
             if(count%2==1){
                 details.style.visibility="visible";
-                details.style.display="block";
-                details.style.position="fixed";
-                product_info.style.visibility="hidden";
             }else{
                 details.style.visibility="hidden";
-                product_info.style.visibility="hidden";   
+                product_info.style.visibility="hidden";
+                track_info.style.visibility="hidden";
+                career_info.style.visibility="hidden";   
             }
         }
-        
         product.onclick = function (){
             details.style.visibility="hidden";
             product_info.style.visibility="visible";
             product_info.style.display="block";
             product_info.style.position="fixed";
         }
-    </script>
-</body>
-</html>
+        track.onclick = function (){
+            details.style.visibility="hidden";
+            track_info.style.visibility="visible";
+            track_info.style.display="block";
+            track_info.style.position="fixed";
+        }
+        career.onclick = function (){
+            details.style.visibility="hidden";
+            career_info.style.visibility="visible";
+            career_info.style.display="block";
+            career_info.style.position="fixed";
+        }
+        let back_product = document.getElementById("back_product");
+        back_product.onclick =function(){
+            details.style.visibility="visible";
+            details.style.display="block";
+            details.style.position="fixed";
+            product_info.style.visibility="hidden";
+        }
+        let back_track = document.getElementById("back_track");
+        back_track.onclick= function(){
+            details.style.visibility="visible";
+            details.style.display="block";
+            details.style.position="fixed";
+            track_info.style.visibility="hidden";
+        }
+        let back_career = document.getElementById("back_career");
+        back_career.onclick= function(){
+            details.style.visibility="visible";
+            details.style.display="block";
+            details.style.position="fixed";
+            career_info.style.visibility="hidden";
+        }
+</script>
