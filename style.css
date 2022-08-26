@@ -83,6 +83,7 @@ em {
 }
 #buttonone b {
   margin-left: 8px;
+  font-size: 14px;
 }
 #buttonone img {
   width: 12%;
@@ -93,6 +94,7 @@ em {
 }
 #buttonone > button:nth-child(2) {
   margin-left: -1px;
+  font-size: 14px;
 }
 #buttontwo button {
   width: 70%;
@@ -106,11 +108,10 @@ em {
   margin-left: 10px;
 }
 #buttontwo img {
-  width: 20%;
+  width: 15%;
   margin-right: -15px;
-  height: 100%;
+  height: 105%;
 }
-
 #ftt h5 {
   color: #2c1338;
   font-family: "GT Haptik Medium", sans-serif;
@@ -141,7 +142,6 @@ em {
   text-align: center;
   padding: 100px 0px 60px 0px;
 }
-
 #ftone {
   display: flex;
   margin-bottom: 50px;
@@ -182,7 +182,7 @@ em {
 }
 #signup button {
   font-family: "GT Haptik Medium", sans-serif;
-  font-size: 1rem;
+  font-size: 16px;
   background: white;
   border: none;
   color: #2c1338;
@@ -193,9 +193,8 @@ em {
   margin: 10px;
   margin-left: 80px;
 }
-
 #demo {
-  padding: 0px 50px;
+  padding: 12px 50px;
   background-color: #fce5d8;
 }
 #demo button {
@@ -203,7 +202,7 @@ em {
   color: white;
   margin: 20px;
   margin-left: 80px;
-  font-size: 17px;
+  font-size: 16px;
   padding: 10px 25px;
   top: 32%;
   left: 53%;
@@ -243,7 +242,6 @@ em {
   color: white;
   line-height: 2;
 }
-
 #footerone {
   display: flex;
   margin-top: 10px;
@@ -276,36 +274,29 @@ em {
   text-decoration: none;
   margin: 5px 2px;
 }
-
 .fa:hover {
   opacity: 0.7;
 }
-
 .fa-facebook {
   background: #3b5998;
   color: white;
 }
-
 .fa-twitter {
   background: #55acee;
   color: white;
 }
-
 .fa-github {
   background: black;
   color: white;
 }
-
 .fa-linkedin {
   background: #007bb5;
   color: white;
 }
-
 .fa-youtube {
   background: #bb0000;
   color: white;
 }
-
 .fa-instagram {
   background: #125688;
   color: white;
@@ -316,7 +307,6 @@ em {
   margin-left: -10px;
   padding: 25px;
 }
-
 #bottom p {
   font-family: "Inter", sans-serif;
   font-size: 16px;
@@ -334,7 +324,6 @@ em {
   padding-left: 40px;
   font-size: 15px;
 }
-
 #footerone p:hover {
   text-decoration: underline;
 }
@@ -348,4 +337,172 @@ button:hover {
 #skill:hover {
   color: #ff8a7a;
   text-decoration: underline;
+}
+ul {
+  list-style: none;
+}
+ul li:before {
+  content: "✓";
+}
+#bookf {
+  background-color: #2c1338;
+  display: flex;
+  color: white;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+#bookf > div:nth-child(1) {
+  width: 15%;
+  height: 100%;
+}
+#bookf > div:nth-child(2) {
+  width: 45%;
+  height: 100%;
+}
+#bookf > div:nth-child(3) {
+  width: 10%;
+  height: 100%;
+}
+#bookf > div:nth-child(4) {
+  width: 37%;
+  height: 100%;
+}
+#bookf > div:nth-child(5) {
+  width: 10%;
+  height: 100%;
+}
+#desc h1 {
+  font-size: 42px;
+  padding-bottom: 50px;
+  line-height: 1.4;
+  color: rgb(253, 241, 236);
+  font-family: "GT Haptik Medium", sans-serif;
+  font-weight: 550;
+  line-height: 1.2;
+  font-size: clamp(1.65rem, 3.5vw, 3rem);
+}
+#desc h4 {
+  font-size: 19px;
+  padding-bottom: 25px;
+  color: rgb(253, 241, 236);
+  line-height: 1.5;
+  font-size: clamp(1.0125rem, 1.25vw, 1.125rem);
+}
+li {
+  font-size: 18px;
+  line-height: 2.8;
+  margin-left: -39px;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(1.0125rem, 1.25vw, 1.125rem);
+}
+#lookpic {
+  display: flex;
+  padding-bottom: 50px;
+  width: 80%;
+  justify-content: left;
+}
+#lookpic img {
+  width: 60%;
+  margin-bottom: -60px;
+  margin-left: -40px;
+}
+#lookpic p {
+  margin-left: -85px;
+  line-height: 1.5;
+  font-family: "GT Haptik Medium", sans-serif;
+  font-size: 1rem;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+#bookform {
+  background-color: #fce5d8;
+  color: #33475b;
+  padding: 28px;
+}
+#bookform h4 {
+  padding-bottom: 30px;
+  padding-top: 10px;
+  font-size: 18px;
+}
+#nme {
+  margin: auto;
+  display: flex;
+  margin-left: -14px;
+}
+input {
+  padding: 8px;
+  width: 96%;
+  margin-bottom: 15px;
+  margin-top: 7px;
+  border: white;
+  font-size: 16px;
+}
+select {
+  padding: 8px;
+  width: 100%;
+  margin-bottom: 15px;
+  margin-top: 7px;
+  border: white;
+  font-size: 16px;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+button {
+  padding: 10px 18px;
+  font-size: 17px;
+  font-weight: 550;
+  background-color: #e57cd8;
+  color: white;
+  border: 0;
+  border-radius: 5%;
+  margin-top: 40px;
+  margin-bottom: 8px;
+  margin-left: 170px;
+}
+#looksen {
+  padding-top: 50px;
+}
+#mid > div {
+  width: 100%;
+  display: grid;
+  height: 100px;
+  margin-left: 14px;
+}
+#mid img {
+  width: 110%;
+  margin-top: -20%;
+}
+#books {
+  display: flex;
+  background-color: #412a4c;
+  color: white;
+}
+#togtwo img {
+  width: 100%;
+  margin-top: -50%;
+}
+#togone {
+  line-height: 1.2;
+  padding-top: 5%;
+  padding-bottom: 12%;
+}
+#togone p {
+  padding-top: 3%;
+  color: #fff3ed;
+  cursor: pointer;
+  line-height: 1.5;
+  font-size: clamp(0.95rem, 1vw, 1rem);
+}
+#togone h1 {
+  color: rgb(253, 241, 236);
+  font-family: "GT Haptik Medium", sans-serif;
+  font-weight: 550;
+  line-height: 1.25;
+  font-size: clamp(1.6rem, 2.5vw, 2rem);
+}
+#socialmediaimg img {
+  width: 28%;
+  margin-bottom: -1%;
 }
