@@ -74,15 +74,18 @@ button {
   padding: 11px 24px;
   font-family: Avenir Next W02, Helvetica, Arial, sans-serif;
   font-weight: 500;
-  color: #b0c1d4 !important;
+  color: white;
   cursor: not-allowed;
   white-space: nowrap;
   border: none;
   border-radius: 4px;
-  background-color: #eaf0f6;
+  background-color: #ff7a59;
 }
 button:hover {
-  background-color: #ff7a59;
-  border-color: #ff7a59;
+  opacity: 0.7;
+}
+a{
+  text-decoration: none;
   color: white;
+  font-weight: 550;
 }
