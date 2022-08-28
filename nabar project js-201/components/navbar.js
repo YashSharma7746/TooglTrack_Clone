@@ -1,21 +1,10 @@
 
+// navbar imaport and export
 
-<!-- https://public-assets.toggl.space/6a88715f-52fe-4e26-99f5-744dd5f5b092/static/9e32f4f0f2d8c5041c49c63a3671b74e/59181/download-media-logo-horizontal.jpg -->
+function navbar() {
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Navbar </title>
-    <link rel="stylesheet" href="style.css">
-    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    return `
     
-</head>
-<body>
-    
-
     <nav id="navbar">
 
         <div id="image">
@@ -239,10 +228,8 @@
         <button id="btn">Try For Free</button>
         </div>
 
-    </nav>
+    </nav>  
+    `
+}
 
-
-
-
-</body>
-</html>
+export {navbar}
