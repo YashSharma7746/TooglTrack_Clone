@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+body{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+
+ .imagebox{
+
+    margin-top: 150px;
+    background: linear-gradient(to bottom, #FFF3ED 50%, #2C1338 50%);
+    padding-bottom: 40px;
+    padding-top: 180px;
+    position: relative;
+    /* border: 5px solid blue; */
+ 
+}
+
+#wrapper {
+
+  
+    transform: skewY(10deg);
+    background: #2C1338;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    overflow: visible;
+    /* border: 5px solid red; */
+ } 
+
+#content{
+   
+    /* max-width: 1110px; */
+    position: relative;
+    padding-bottom: 0;
+    /* -webkit-transform: skewY(-10deg); */
+    transform: skewY(-10deg);
+    margin: 0 auto;
+    padding: 60px 30px;
+    color: white;
+    /* border: 5px solid green; */
+
+} 
+
+
+#read_case{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    width: 90%;
+    margin: auto;
+    /* border: 2px solid white; */
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+#read_case p{
+    line-height: 20px;
+    font-weight: 40px;
+}
+#child_img{
+    width: 40%;
+    margin-left: 55%;
+    margin-top: -140px;
+   
+    /* border: 2px solid yellowgreen; */
+}
+#read_case h1{
+    font-size: 45px;
+    
+}
+#images{
+    width: 80%;
+    margin: auto;
+}
+img{
+    width: 100%;
+}
+
+ #head1 {
+    width: 50%;
+    /* border: 2px solid rgb(44, 225, 83); */
+    margin-left: 40px;
+    margin-top: -100px;
+    margin-bottom: 100px;
+  
+}
+#one_read{
+    background-color: #FFF3ED;
+    color: black;
+    text-align: center;
+}
+#one_read>p+p{
+    color: #D378D5;
+}
+#one_read>h1+p{
+    width: 90%;
+    margin: auto;
+
+}
+#two_read{
+    background-color: #FFF3ED;
+    color: black;
+    text-align: center;
+    /* margin-top: 50px; */
+}
+#two_read>p+p{
+    color: #D378D5;
+}
+#two_read>h1+p{
+    width: 90%;
+    margin: auto;
+
+}
+#three_read{
+    background-color: #FFF3ED;
+    color: black;
+    text-align: center;
+    /* margin-top: 100px; */
+}
+
+#three_read>p+p{
+    color: #D378D5;
+}
+#three_read>h1+p{
+    width: 90%;
+    margin: auto;
+
+}
+#start_track{
+    font-size: 20px;
+    padding: 15px 10px;
+    background-color: #D378D5;
+    border-radius: 50px;
+    margin: 20px 0px;
+    color: white;
+    padding: 15px 40px;
+    margin-left: 35%;
+    margin-right: 35%;
+    
+}
+
+
+#demo{
+    /* width: 25%; */
+    /* border: 2px solid red; */
+    margin: 50px auto;
+
+}
+
+@media screen and (min-width: 350px) and (max-width: 800px){
+
+    #read_case{
+        grid-template-columns: repeat(1,1fr);
+        gap: 20px;
+    }
+
+#child_img{
+    width: 40%;
+    margin-left: 55%;
+    margin-top: -50px;
+}
+
+}
+
+
+
+
+
+    </style>
+</head>
+<body>
+   
+    
+    <div class="imagebox">
+
+
+      <div id="wrapper">
+
+<div id="content">
+   <div id="child_img">
+    <img src="https://public-assets.toggl.com/b/static/8b4370a93348ea0e12f37a78902eced6/67d97/illo-teams.avif" alt="">
+</div>
+
+
+<h1 id="head1">70,000+ customers use Toggl Track to hit their productivity and business goals</h1>
+
+
+<div id="read_case">
+
+
+    <div id="one_read">
+        <h1>↑20%</h1>
+        <p>Toggl Track increased PR Agency Sweat+Co’s profitability by at least 20% with accurate billable hours tracking</p>
+        <p>Read Case study</p>
+    </div>
+
+    <div id="two_read">
+        <h1>100%</h1>
+        <p>Software consultancy Moove It provides 100% transparency to their clients, even in a company as large as 100+!</p>
+        <p>Read Case study</p>
+    </div>
+
+    <div id="three_read">
+        <h1>↑45%</h1>
+        <p>Creative studio RogueMark Studios boosted resource allocation by 45% thanks to accurate labor forecasting.</p>
+        <p>Read Case study</p>
+    </div>
+
+
+
+</div>
+
+<div id="images">
+    <img src="https://public-assets.toggl.com/b/static/5fcebba893fe8a5ce67303e8f3fdb2e7/829a1/brands-paid-desktop.avif" alt="">
+</div>
+
+<div id="demo">
+<button id="start_track"> Start tracking for free </button>
+
+</div>
+
+
+</div>
+
+</div>
+    </div>
+</body>
+</html>

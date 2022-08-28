@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="../STYLE/login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../STYLE/style.css">
+</head>
+
+
+<body>
+    <div class="login__background">
+        <div class="login__background_top">
+            <p>Log in to your account</p>
+            <p>Let's get tracking!</p>
+
+        </div>
+        
+        <div class="login__background_bottom"></div>
+   
+
+        <div class="login__data">
+
+            <div>
+                <div>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/1004px-Google_%22G%22_Logo.svg.png"/>
+                    <a href="https://accounts.google.com/o/oauth2/auth/oauthchooseaccount?access_type=online&client_id=426090949585-au9jodg0hqhc5l161evdrb667fsqf37n.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Ftrack.toggl.com%2Fauth&response_type=code&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&state=eyJ0eXBlIjoiZ29vZ2xlLXNpZ24taW4ifQ%3D%3D&flowName=GeneralOAuthFlow">
+                        Login via Google
+                    </a>
+                </div>
+    
+                <div>
+                    <img src="data:image/png;base64,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"/>
+                    <a href="https://appleid.apple.com/auth/authorize?client_id=com.toggl.track&scope=name%20email&response_type=code%20id_token&response_mode=form_post&redirect_uri=https%3A%2F%2Ftrack.toggl.com%2Fapi%2Fv9%2Foauth%2Fapple%2Fcallback&state=eyJ0eXBlIjoiYXBwbGUtc2lnbi1pbiJ9">
+                        Login via Apple 
+                    </a>
+                </div>
+
+            </div>
+
+           
+
+            <div class="login__input">
+                <form id="form">
+            
+                <p>Email</p>
+                <input type="text" placeholder="Email" class = "email" id="email"  required />
+    
+                <p>Password</p>
+                <input type="password" placeholder="password" class = "password" id="password" required/>
+            </div>
+
+            <div class="forget" >Forgot password?</div>
+
+            <div class="login__btn">
+      
+                <input type="submit" value="Login" id="login_btn">
+            </div>
+
+
+
+            <div class="cl" >
+                <a href="http://google.com" target="_blank" rel="noopener noreferrer"  >Company login (SSO)</a>
+            </div>
+
+        </form>
+
+        </div>
+
+        
+
+
+        
+    </div>
+    <div id="footer">
+        <div>
+          <h1 style="color: #d372c8;padding-left :50px; padding-top: 20px;padding-bottom: 15px;">  <span style="font-family: 'Rubik Dirt',  cursive; font-weight:400; color: #d372c8;">toggl</span> <span style="font-weight: 100;">track</span> </h1>
+        </div>
+  
+        <div id="footerone">
+          <div>
+            <h5>TOGGL GLOBAL</h5>
+            <p>Blog</p>
+            <p>Our Mission</p>
+            <p>Working at Toggl</p>
+            <p>Legal Terms</p>
+            <p class="dot">.</p>
+            <p class="dot">.</p>
+          </div>
+          <div>
+            <h5 class="fc">PRODUCT</h5>
+            <p>Features</p>
+            <p>Pricing</p>
+            <p>Integrations</p>
+            <p>Case Studies</p>
+            <p>API</p>
+            <p class="dot">.</p>
+          </div>
+          <div>
+            <h5 class="fc">USE CASES</h5>
+            <p>Billing and Invoicing</p>
+            <p>Employee Time Tracking</p>
+            <p>Project Budgeting</p>
+            <p>Reporting</p>
+            <p>Payroll</p>
+            <p class="dot">.</p>
+          </div>
+          <div>
+            <h5 class="fc">DOWNLOAD</h5>
+            <p>Mobile Apps</p>
+            <p>Desktop Apps</p>
+            <p>Browser Extensions</p>
+            <p class="dot">.</p>
+            <p class="dot">.</p>
+            <p class="dot">.</p>
+          </div>
+          <div>
+            <h5 class="fc">HELP</h5>
+            <p>Support & Knowledge Base</p>
+            <p>Request A Demo</p>
+            <p>Contact Us</p>
+            <p class="dot">.</p>
+            <p class="dot">.</p>
+            <p class="dot">.</p>
+          </div>
+          <div>
+            <h5 class="fc">RESOURCES</h5>
+            <p>Time Management Hub</p>
+            <p>Work From Home Hub</p>
+            <p>Business Resources</p>
+            <p>Productivity Resources</p>
+            <p>Timesheet Templates</p>
+            <p>Media Kit</p>
+          </div>
+        </div>
+        <div>
+          <div id="socialmediaimg">
+            <img src="https://i.ibb.co/D82PtC0/socialmedia.png" alt="socialmedia" border="0">
+        </div>
+      </div>
+      <div id="bottom">
+        <div>
+          <p>Discover other</p>
+          <p>Toggl tools:</p>
+        </div>
+        <div>
+          <p style="color: #a876f5;">
+            <span style="font-family: 'Rubik Dirt',  cursive; font-weight:400;font-size: 25px;">toggl</span> <span style="font-weight: 100;font-size:25px">plan</span> </p>
+          <p id="bea">Beautifully simple work planning</p>
+        </div>
+        <div>
+          <p style="color: #ff8a7a;"><span style="font-family: 'Rubik Dirt',  cursive; font-weight:400;font-size: 25px;">toggl</span>  <span style="font-weight: 100;font-size:25px">hire</span> </p>
+          <p id="skill">Skills-based hiring</p>
+        </div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div id="lastdiv">
+        <p>© 2022 Toggl. All rights reserved.</p>
+      </div>
+    <script src = "../SCRIPT/login.js"></script>
+</body>
+</html>

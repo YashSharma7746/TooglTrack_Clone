@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap");
+#headtog {
+  font-size: 5rem;
+  font-family: "Rubik Dirt", cursive;
+  font-weight: 400;
+  margin: auto;
+  text-align: center;
+  margin-top: -15px;
+  color: #2c1338;
+}
+#togfrt {
+  border: 45px solid #fef9f7;
+  width: 50%;
+  background-color: #ffffff;
+  height: 38rem;
+  margin: auto;
+  text-align: center;
+  align-items: center;
+}
+#togfrt img {
+  width: 26%;
+  padding-top: 5%;
+}
+#togfrt p {
+  width: 45%;
+  margin: auto;
+  font-family: Avenir Next W02, Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  font-size: 14px;
+  color: #33475b;
+  line-height: 1.9;
+  padding-top: 2%;
+}
+#togfrt h1 {
+  width: 50%;
+  margin: auto;
+  font-family: Avenir Next W02, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  display: block;
+  line-height: normal;
+  text-transform: none;
+  font-weight: bolder;
+  font-size: 32px;
+  color: #33475b;
+  line-height: 1.2;
+}
+h5 {
+  font-family: Avenir Next W02, Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #33475b;
+  padding-top: 2%;
+  margin-left: -25%;
+}
+input {
+  padding: 9px 10px;
+  border-radius: 3px;
+  border: 1px solid #cbd6e2;
+  font-size: 16px;
+  transition: all 0.15s ease-out;
+  background-color: #f5f8fa;
+  color: #33475b;
+  display: block;
+  height: 17px;
+  line-height: 22px;
+  text-align: left;
+  width: 40%;
+  margin: auto;
+  margin-top: -2%;
+}
+button {
+  font-size: 14px;
+  line-height: 16px;
+  padding: 11px 24px;
+  font-family: Avenir Next W02, Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  color: white;
+  cursor: not-allowed;
+  white-space: nowrap;
+  border: none;
+  border-radius: 4px;
+  background-color: #ff7a59;
+}
+button:hover {
+  opacity: 0.7;
+}
+a{
+  text-decoration: none;
+  color: white;
+  font-weight: 550;
+}

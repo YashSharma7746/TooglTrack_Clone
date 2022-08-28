@@ -1,0 +1,196 @@
+#sddiv {
+  background-color: #fff3ed;
+  padding: 5%;
+}
+em {
+  font-family: "GT Haptik Medium", sans-serif;
+  color: #e57cd8;
+}
+#hdsh {
+  text-align: center;
+  color: #412a4c;
+  font-family: "GT Haptik Medium", sans-serif;
+  font-weight: 550;
+  line-height: 1.2;
+  font-size: clamp(3rem * 0.55, 3.5vw, 3rem);
+  margin: 0% auto 2% auto;
+  max-width: 850px;
+  text-align: center;
+  padding-top: 2%;
+}
+#uptwodiv {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  margin: auto;
+  width: 75%;
+  column-gap: 2.5%;
+}
+#uptwodiv > div {
+  margin: auto;
+  padding: 5%;
+  border-radius: 1%;
+}
+#uptwodiv > div:nth-child(1) {
+  background-color: #fae5f7;
+}
+#uptwodiv > div:nth-child(2) {
+  background-color: #fce5d8;
+}
+#uptwodiv > div > div > h4 {
+  line-height: 1.5;
+  font-size: clamp(1rem * 0.95, 1vw, 1rem);
+  color: #e57cd8;
+  text-transform: uppercase;
+  font-weight: 800;
+  margin-bottom: 10px;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+}
+#uptwodiv > div > div > h3 {
+  font-family: "Inter", sans-serif;
+  font-size: clamp(2rem * 0.7, 2.3vw, 2rem * 0.9);
+  color: #412a4c;
+  font-family: "GT Haptik Medium", sans-serif;
+  font-weight: 600;
+  line-height: 1.25;
+  padding-right: 20%;
+}
+#uptwodiv > div > div > button {
+  padding: 3.5% 7%;
+  border-radius: 50px;
+  border: none;
+  font-family: "GT Haptik Medium", sans-serif;
+  font-size: 1rem;
+  transition: background-color 150ms linear, color 150ms linear;
+  background-color: #e57cd8;
+  color: #fff;
+  margin-bottom: -5%;
+}
+#uptwodiv > div > img {
+    width: 80%;
+  padding-left: 20%;
+}
+#uptwodiv > div > p {
+  color: #412a4c;
+  line-height: 1.5;
+  font-size: clamp(1rem * 0.95, 1vw, 1rem);
+  font-weight: 750;
+  font-family: "Inter", sans-serif;
+}
+.sdp {
+  color: #564260;
+  font-size: 0.875rem;
+  line-height: 1.35;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+}
+#lowdiv {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  margin: auto;
+  width: 75%;
+  column-gap: 2%;
+  margin-top: 2%;
+}
+#lowdiv > div {
+  padding: 6.5%;
+  border-radius: 2%;
+}
+#lowdiv > div:nth-child(1) {
+  background-color: #fce5d8;
+}
+#lowdiv > div:nth-child(2) {
+  background-color: #ffebbd;
+}
+
+#lowdiv > div:nth-child(3) {
+  background-color: #fae5f7;
+}
+#lowdiv > div > div > h4 {
+  line-height: 1.5;
+  font-size: clamp(1rem * 0.95, 1vw, 1rem);
+  color: #e57cd8;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-family: "Inter", sans-serif;
+}
+#lowdiv > div > div > h2 {
+  margin-bottom: 40px;
+  font-family: "Inter", sans-serif;
+  font-weight: 550;
+  font-size: clamp(1.25rem, 1.5vw, 1.25rem * 1.1);
+  line-height: 1.5;
+  line-height: 1.35;
+  color: #412a4c;
+}
+#lowdiv > div p {
+  margin-top: auto;
+  font-family: "GT Haptik Medium", sans-serif;
+  font-size: 1rem;
+  align-items: center;
+  border-radius: 26px;
+  border: 0;
+  cursor: pointer;
+  transition: background-color 150ms linear, color 150ms linear;
+  background-color: transparent;
+  font-weight: 500;
+}
+.thdiv {
+  height: 68%;
+}
+button:hover {
+  opacity: 0.7;
+}
+#uptwodiv p :hover {
+  color: violet;
+}
+#lowdiv > div p:hover {
+  color: violet;
+}
+
+@media all and (min-width: 800px) and (max-width: 1200px) {
+  #lowdiv {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 5%;
+    width: 100%;
+  }
+  #lowdiv>div{
+    width: 85%;
+  }
+  #uptwodiv {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    width: 100%;
+    height: 100%;
+    gap: 5%;
+  }
+  #uptwodiv img{
+    width: 80%;
+  }
+}
+@media all and (min-width: 100px) and (max-width: 800px) {
+  #lowdiv {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+    gap: 5% 5%;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 15%;
+  }
+  #uptwodiv img{
+    width: 80%;
+  }
+  #uptwodiv {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+    gap: 5%;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 15%;
+  }
+}
